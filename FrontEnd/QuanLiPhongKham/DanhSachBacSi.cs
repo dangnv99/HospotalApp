@@ -212,8 +212,17 @@ namespace QuanLiPhongKham
         }
         private void DanhSachBacSi_Load(object sender, EventArgs e)
         {
-            Getdata();
-            LoadService();
+            try
+            {
+                Getdata();
+                LoadService();
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+            
+           
         }
         private void btnSua_Click(object sender, EventArgs e)
         {

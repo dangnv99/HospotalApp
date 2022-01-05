@@ -55,43 +55,58 @@ namespace QuanLiPhongKham
         public void create(Medicine data_)
         {
 
-            var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
-            File.WriteAllText("utf8.json", json, Encoding.UTF8);
-            File.WriteAllText("default.json", json, Encoding.Default);
-            var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
-            var url = "http://localhost/data/api/Medicine/create-Medicine";
-            var client = new HttpClient();
-            var response = client.PostAsync(url, data).Result;
-            var result = response.Content.ReadAsStringAsync().Result;
-            if (result.Contains("thành công"))
+            try
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Thêm thuốc thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-                LoadMdedicine();
+                var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
+                File.WriteAllText("utf8.json", json, Encoding.UTF8);
+                File.WriteAllText("default.json", json, Encoding.Default);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                var url = "http://localhost/data/api/Medicine/create-Medicine";
+                var client = new HttpClient();
+                var response = client.PostAsync(url, data).Result;
+                var result = response.Content.ReadAsStringAsync().Result;
+                if (result.Contains("thành công"))
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Thêm thuốc thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    LoadMdedicine();
+                }
+                else
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Thêm thuốc thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Thêm thuốc thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
+
+
         }
         public void createupdate(Medicine data_)
         {
-
-            var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
-            File.WriteAllText("utf8.json", json, Encoding.UTF8);
-            File.WriteAllText("default.json", json, Encoding.Default);
-            var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
-            var url = "http://localhost/data/api/Medicine/update-Medicine";
-            var client = new HttpClient();
-            var response = client.PostAsync(url, data).Result;
-            var result = response.Content.ReadAsStringAsync().Result;
-            if (result.Contains("thành công"))
+            try
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Sửa thuốc thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-                LoadMdedicine();
+                var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
+                File.WriteAllText("utf8.json", json, Encoding.UTF8);
+                File.WriteAllText("default.json", json, Encoding.Default);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                var url = "http://localhost/data/api/Medicine/update-Medicine";
+                var client = new HttpClient();
+                var response = client.PostAsync(url, data).Result;
+                var result = response.Content.ReadAsStringAsync().Result;
+                if (result.Contains("thành công"))
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Sửa thuốc thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    LoadMdedicine();
+                }
+                else
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Sửa thuốc thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Sửa thuốc thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
 
@@ -123,7 +138,6 @@ namespace QuanLiPhongKham
                     wc.QueryString.Add("id", data.idMedicine);
                     var datawc = wc.UploadValues(url, "POST", wc.QueryString);
                     var responseString = UnicodeEncoding.UTF8.GetString(datawc);
-
                 }
             }
             catch (Exception ex)

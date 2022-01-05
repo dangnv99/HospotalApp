@@ -110,18 +110,27 @@ namespace QuanLiPhongKham
 
         private void txtSua_Click(object sender, EventArgs e)
         {
-            var data = (transInfo)grvDanhSachDichVu.GetFocusedRow();
-            if (data != null)
+          
+            try
             {
-                string url = "http://localhost/data/api/Service/Update-Service"; 
-                WebClient wc = new WebClient();
-                wc.QueryString.Add("id", data.id);
-                wc.QueryString.Add("name", txtName.Text);
-                wc.QueryString.Add("price", txtprice.Text);
-                var data_ = wc.UploadValues(url, "POST", wc.QueryString);
-                var responseString = UnicodeEncoding.UTF8.GetString(data_);
-                LoadService();
+                var data = (transInfo)grvDanhSachDichVu.GetFocusedRow();
+                if (data != null)
+                {
+                    string url = "http://localhost/data/api/Service/Update-Service";
+                    WebClient wc = new WebClient();
+                    wc.QueryString.Add("id", data.id);
+                    wc.QueryString.Add("name", txtName.Text);
+                    wc.QueryString.Add("price", txtprice.Text);
+                    var data_ = wc.UploadValues(url, "POST", wc.QueryString);
+                    var responseString = UnicodeEncoding.UTF8.GetString(data_);
+                    LoadService();
+                }
             }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+             
         }
 
         private void grvDanhSachDichVu_Click(object sender, EventArgs e)

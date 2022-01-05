@@ -180,8 +180,6 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
-
-
         public void LoadSchedule()
         {
 
@@ -305,10 +303,19 @@ namespace QuanLiPhongKham
 
         private void FormKhambenh_Load(object sender, EventArgs e)
         {
-            GetdataPatient();
-            LoadService();
-            GetdataDoctor();
-            thread();
+           
+            try
+            {
+                GetdataPatient();
+                LoadService();
+                GetdataDoctor();
+                thread();
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+             
         }
 
         private void gvLichKham_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)

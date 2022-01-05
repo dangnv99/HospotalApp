@@ -166,7 +166,15 @@ namespace QuanLiPhongKham
 
         private void DanhSachBenhNhan_Load(object sender, EventArgs e)
         {
-            Getdata();
+            
+            try
+            {
+                Getdata();
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)

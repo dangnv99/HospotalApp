@@ -116,24 +116,32 @@ namespace QuanLiPhongKham
         public void Cancle(CancleShuedule data_)
         {
 
-            var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
-            File.WriteAllText("utf8.json", json, Encoding.UTF8);
-            File.WriteAllText("default.json", json, Encoding.Default);
-            var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
-            var url = "http://localhost/data/api/Schedule/cancel-schedule-patient";
-            var client = new HttpClient();
-            var response = client.PostAsync(url, data).Result;
-            var result = response.Content.ReadAsStringAsync().Result;
-            if (result.Contains("thành công"))
+            try
             {
-                thread();
-                DevExpress.XtraEditors.XtraMessageBox.Show("Hủy lịch thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
+                File.WriteAllText("utf8.json", json, Encoding.UTF8);
+                File.WriteAllText("default.json", json, Encoding.Default);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                var url = "http://localhost/data/api/Schedule/cancel-schedule-patient";
+                var client = new HttpClient();
+                var response = client.PostAsync(url, data).Result;
+                var result = response.Content.ReadAsStringAsync().Result;
+                if (result.Contains("thành công"))
+                {
+                    thread();
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Hủy lịch thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
 
+                }
+                else
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Hủy lịch thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Hủy lịch thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                Inventec.Common.Logging.LogSystem.Error(ex);                
             }
+
         }
         public void GetdataPatient()
         {
@@ -180,7 +188,6 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
-
 
         public void LoadSchedule()
         {
