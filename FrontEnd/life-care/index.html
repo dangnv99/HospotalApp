@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- Site Metas -->
+<title>dangkykhamonline.com</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Site Icons -->
+<link rel="shortcut icon" href="images/fevicon.ico.png" type="image/x-icon" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Site CSS -->
+<link rel="stylesheet" href="style.css">
+<!-- Colors CSS -->
+<link rel="stylesheet" href="css/colors.css">
+<!-- ALL VERSION CSS -->
+<link rel="stylesheet" href="css/versions.css">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css">
+<!-- Modernizer for Portfolio -->
+<script src="js/modernizer.js"></script>
+<!-- [if lt IE 9] -->
+<!-- <script src="Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="Scripts/jquery.blockUI.js" type="text/javascript"></script>
+<script src="Scripts/json2.js" type="text/javascript"></script> -->
+<script src="js/all.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#btnRegisterEastVillage").click(function() {
+            // $.blockUI();
+            var random = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            jQuery.support.cors = true;
+            //var name = $("#name").val()
+            var EOI = {
+                "name": $("#name").val(),
+                "sex": $("#sex").val(),
+                "yearOfBirth": $("#yearOfBirth").val(),
+                "phone": $("#Phone").val(),
+                "address": $("#Address").val(),
+                "username": randomString(8, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+                "password": randomString(8, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+                "doctor": $("#doctor").val(),
+                "service": $("#Service").val(),
+            };
+            $.ajax({
+                    //url: 'http://ing002-test.test.yourasp.com/webservice/api/Lead/RegistLeadCampaign',
+                    //url: 'http://ing002.test.yourasp.com/webservice/api/Lead/RegistLeadCampaign',
+                    //url: 'http://portal.zavantionline.com/WebApps/IngeniaTest/Lead/api/Lead/RegistLeadCampaign',
+
+                    url: 'http://localhost/data/api/User/Creat-User',
+                    type: 'POST',
+                    data: JSON.stringify(EOI),
+                    contentType: "application/json;charset=utf-8",
+
+                    success: function(result) {
+                        console.log(result);
+                        if (result.data != null) {
+                            userrole(result.data);
+                            create(result.data); //
+
+                        }
+                        //alert("Successful");
+                        //   $.unblockUI();
+                    },
+                    error: function(data) {
+                        alert("Thất bại");
+                        //   $.unblockUI();
+                    }
+
+
+                })
+                // .done(
+                //     function(response) {
+                //         create(response.data);
+                //     }
+                // )
+        });
+    });
+
+    function randomString(length, chars) {
+        var result = '';
+        for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+        return result;
+    }
+
+    function gohome() {
+        window.location.href = "http://localhost/life-care/"
+    }
+
+    function create(chars) {
+        jQuery.support.cors = true;
+
+        var data_ = {
+            DoctorId: String($("#Doctor").val()),
+            PatientId: String(chars),
+            DateTimeStamp: String($("#date").val()),
+            ServiceId: String($("#Service").val()),
+        };
+        $.ajax({
+            url: 'http://localhost/data/api/Schedule/creat-shedule',
+            type: 'POST',
+            contentType: "application/json;charset=utf-8",
+            // dataType: "json",
+            data: JSON.stringify(data_),
+            success: function(result) {
+                console.log(result);
+
+                result.data != null
+                alert("Đăng ký thành công!");
+                gohome();
+
+                // doctor
+            },
+            error: function(result) {
+                $('option', '#Doctor').remove();
+                $('#Doctor')
+                    .append($("<option></option>")
+                        .attr("value", "")
+                        .text("--- Chọn bác sĩ ---"));
+                alert("Thất bại");
+                //   $.unblockUI();
+            }
+        });
+
+
+    }
+
+    function userrole(chars) {
+        jQuery.support.cors = true;
+
+        var data_ = {
+            UserId: String(chars),
+            RoleId: '724d3d68-6dd4-4381-a8b7-771b807b5e54',
+        };
+        $.ajax({
+            url: 'http://localhost/data/api/User/User-Role',
+            type: 'POST',
+            contentType: "application/json;charset=utf-8",
+            // dataType: "json",
+            data: JSON.stringify(data_),
+            success: function(result) {
+                console.log(result);
+
+                // result.data != null
+                // alert("Đăng ký thành công!");
+                // gohome();
+                // doctor
+            },
+            error: function(result) {
+                $('option', '#Doctor').remove();
+                $('#Doctor')
+                    .append($("<option></option>")
+                        .attr("value", "")
+                        .text("--- Chọn bác sĩ ---"));
+                alert("Thất bại");
+                //   $.unblockUI();
+            }
+        });
+
+
+    }
+
+    function getDoctor(selectObject) {
+
+        // $.blockUI();
+        jQuery.support.cors = true;
+        var ServiceId = selectObject.value;
+        var data = {
+            Id: ServiceId,
+
+        };
+        $.ajax({
+            url: 'http://localhost/data/api/User/get-list-doctor-service',
+            type: 'POST',
+            data: JSON.stringify(data),
+
+
+            contentType: "application/json;charset=utf-8",
+            success: function(result) {
+                console.log(result);
+                $('option', '#Doctor').remove();
+                $('#Doctor')
+                    .append($("<option></option>")
+                        .attr("value", "")
+                        .text("--- Chọn bác sĩ ---"));
+                if (result.data != null) {
+                    for (var i = 0; i < result.data.length; i++) {
+                        var item = result.data[i]
+                        $('#Doctor').append($('<option>', {
+                            value: item.id,
+                            text: item.nameDoctor
+                        }));
+                    }
+                }
+                // doctor
+            },
+            error: function(result) {
+                $('option', '#Doctor').remove();
+                $('#Doctor')
+                    .append($("<option></option>")
+                        .attr("value", "")
+                        .text("--- Chọn bác sĩ ---"));
+                alert("Thất bại");
+                //   $.unblockUI();
+            }
+        });
+
+    }
+
+    function ChoosenDoctor(selectObject) {
+
+
+
+
+
+    }
+    $(document).ready(function() {
+        $.ajax({
+
+            url: 'http://localhost/data/api/Service/get-list-Service',
+            type: 'POST',
+            // data: JSON.stringify(EOI),
+            contentType: "application/json;charset=utf-8",
+            success: function(result) {
+                console.log(result);
+                for (var i = 0; i < result.data.length; i++) {
+                    var item = result.data[i]
+                    $('#Service').append($('<option>', {
+                        value: item.id,
+                        text: item.name + ' - ' + item.price + ' VNĐ'
+                    }));
+                }
+                // Service
+            },
+            error: function(data) {
+                alert("Thất bại");
+                //   $.unblockUI();
+            }
+        });
+
+    });
+</script>
+</head>
+
+<body class="clinic_version">
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
+    </div>
+    <!-- END LOADER -->
+    <header>
+        <div class="header-top wow fadeIn">
+            <div class="container">
+                <!--  <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a> -->
+                <div class="right-header">
+                    <div class="header-info">
+                        <div class="info-inner" style="float: left;">
+                            <span class="icontop"><img src="images/phone-icon.png" alt="#"></span>
+                            <span class="iconcont"><a href="tel:+84965185562">(+84) 0965185562</a></span>
+                        </div>
+                        <div class="info-inner" style="float:left">
+                            <span class="icontop"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <span class="iconcont"><a data-scroll href="mailto:dangphucnguyen0309@gmail.com">dangphucnguyen0309@gmail.com</a></span>
+                        </div>
+                        <div class="info-inner" style="float: right;">
+                            <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                            <span class="iconcont"><a data-scroll href="#">Thời gian: 7:00am - 8:00pm</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom wow fadeIn">
+            <div class="container">
+                <nav class="main-menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    </div>
+
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a class="ae" data-scroll href="index.html">Trang chủ</a></li>
+                            <li><a class="ac" data-scroll href="#about">Giới thiệu</a></li>
+                            <li><a class="aaa" data-scroll href="#service">Dịch vụ</a></li>
+                            <li><a class="ul" data-scroll href="#doctors">Đội ngũ y tế</a></li>
+                            <!--  <li><a data-scroll href="#price">Price</a></li>
+						<li><a data-scroll href="#testimonials">Testimonials</a></li>
+                        <li><a data-scroll href="#getintouch">Contact</a></li> -->
+                        </ul>
+                    </div>
+                </nav>
+                <div class="serch-bar">
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg" placeholder="Tìm kiếm" />
+                            <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('images/slider-bg.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="text-contant">
+                        <h2>
+                            <span class="center"><span class="icon"><img src="images/icon-logo.png" alt="#" /></span></span>
+                            <a href="" class="typewrite" data-period="2000" data-type='[ "Dịch vụ chăm sóc sức khỏe từ xa" ]'>
+                                <span class="wrap"></span>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end section -->
+    <div id="time-table" class="time-table-section">
+        <div class="container">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="service-time one" style="background:#2895f1;">
+                        <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
+                        <h3>Phục vụ 24/24</h3>
+                        <p>Chúng tôi luôn sẵn sàng phục vụ bạn mọi lúc mọi nơi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="service-time middle" style="background:#0071d1;">
+                        <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                        <h3>Thời gian làm việc</h3>
+                        <div class="time-table-section">
+                            <ul>
+                                <li><span class="left">Thứ 2 - Thứ 6</span><span class="right">8.00 – 18.00</span></li>
+                                <li><span class="left">Thứ 7</span><span class="right">8.00 – 16.00</span></li>
+                                <li><span class="left">Chủ nhật</span><span class="right">8.00 – 13.00</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="service-time three" style="background:#0060b1;">
+                        <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+                        <h3>Đa dịch vụ</h3>
+                        <p>Chúng tôi luôn cung cấp nhiều dịch vụ mang đến trải nghiệm tốt nhất cho bạn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="section wow fadeIn">
+        <div class="container">
+            <div class="heading">
+                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+                <h2>Phòng khám đa khoa</h2>
+            </div>
+            <!-- end title -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <!-- <h4>What We Do</h4> -->
+                        <h2>Giới thiệu chung</h2>
+                        <p class="one">Tự hào là thương hiệu phòng khám có bề dầy 10 năm kinh nghiệm chăm sóc và phục vụ khách hàng trên cả nước. </p>
+                        <p class="true">Với tiêu chỉ “SỨC KHỎE LÀ VÀNG”, phòng khám đa khoa Hà Đăng luôn nỗ lực hết sức mình cùng khách hàng giữ gìn, bảo vệ sức khỏe bằng lòng yêu thương, coi sức khỏe của khách hàng như sức khỏe của bản thân! </p>
+                        <p class="the">Một khi được trao giữ trọng trách là “người nắm giữ chìa khóa kho vàng của thượng đế”, đội ngũ y bác sĩ chúng tôi nói riêng và Phòng khám Phú Đức nói chung luôn tâm niệm và đặt lợi ích của khách hàng lên hàng đầu.</p>
+                        <!-- <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a> -->
+                    </div>
+                    <!-- end messagebox -->
+                </div>
+                <!-- end col -->
+                <div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="images/DSC02749.jpg" alt="" class="img-responsive">
+                        <!-- <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a> -->
+                    </div>
+                    <!-- end media -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+            <hr class="hr1">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-widget">
+                        <div class="post-media wow fadeIn">
+                            <a href="images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="images/clinic_01.jpg" alt="" class="img-responsive">
+                        </div>
+                        <h3>Công nghệ hiện đại</h3>
+                    </div>
+                    <!-- end service -->
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-widget">
+                        <div class="post-media wow fadeIn">
+                            <a href="images/clinic_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="images/clinic_02.jpg" alt="" class="img-responsive">
+                        </div>
+                        <h3>Phòng khám tiện nghi</h3>
+                    </div>
+                    <!-- end service -->
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-widget">
+                        <div class="post-media wow fadeIn">
+                            <a href="images/clinic_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="images/clinic_03.jpg" alt="" class="img-responsive">
+                        </div>
+                        <h3>Dội ngũ y tế chuyên nghiệp</h3>
+                    </div>
+                    <!-- end service -->
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-widget">
+                        <div class="post-media wow fadeIn">
+                            <a href="images/covid_media.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                            <img src="images/covid_media.jpg" alt="" class="img-responsive">
+                        </div>
+                        <h3>Tư vấn điều trị tận tình</h3>
+                    </div>
+                    <!-- end service -->
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <div id="service" class="services1 wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                    <div class="inner-services">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon1.png" alt="#" /></span>
+                                <h4>Thiết bị hiện đại</h4>
+                                <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon2.png" alt="#" /></span>
+                                <h4>Phòng xét nghiệm tiện nghi</h4>
+                                <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon3.png" alt="#" /></span>
+                                <h4>Đánh giá cụ thể chi tiết</h4>
+                                <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon4.png" alt="#" /></span>
+                                <h4>Chăm sóc trẻ</h4>
+                                <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon5.png" alt="#" /></span>
+                                <h4>Cơ sở hạ tầng tân tiến</h4>
+                                <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="serv">
+                                <span class="icon-service"><img src="images/service-icon6.png" alt="#" /></span>
+                                <h4>Ngân hàng thuốc</h4>
+                                <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="appointment-form1">
+                        <h3><span>+</span> Đăng ký khám ngay</h3>
+                        <div class="form">
+                            <form action="index.html">
+                                <fieldset>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <input type="text" id="name" placeholder="Họ tên" value="" name="hoten" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <input type="Phone" placeholder="Số điện thoại" id="Phone" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <input type="yearOfBirth" placeholder="Năm sinh" id="yearOfBirth" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <input type="Address" placeholder="Địa chỉ" id="Address" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <select class="form-control" value="" id="sex">
+                                          <option value="">Giới tính</option>
+                                          <option value= "Nam">Nam</option>
+                                          <option value= "Nữ">Nữ</option>
+                                          
+                                       </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <select class="form-control" id="Service" onchange="getDoctor(this)"> 
+                                                    <option value=""> --- Chọn dịch vụ ---</option>
+                                           </select>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <select class="form-control" id="Doctor" onchange="ChoosenDoctor(this)"> 
+                                                    <option value=""> --- Chọn bác sĩ ---</option>
+                                           </select>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <input type="date" id="date"></input>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>Doctor Name</option>
+                                          <option>Mr.XYZ</option>
+                                          <option>Mr.ABC</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div> -->
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="UserName" placeholder="Tên tài khoản" id="UserName" />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="Password" placeholder="Mật khẩu" id="Password" />
+                                    </div>
+                                 </div>
+                              </div> -->
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="center"><button type="button" id="btnRegisterEastVillage" value="REGISTER NOW">Đăng ký</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section -->
+
+    <!-- doctor -->
+
+    <div id="doctors" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="doctors" tabindex="-1">
+        <div class="container">
+
+            <div class="heading">
+                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+                <h2>Đội ngũ bác sĩ, y tá</h2>
+            </div>
+
+            <div class="row dev-list text-center">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                    <div class="widget clearfix">
+                        <img src="images/bac-si-tai-Seoul-Center.jpg" alt="" class="img-responsive img-rounded">
+                        <div class="widget-title">
+                            <!-- <h3>Soren Bo Bostian</h3> -->
+
+                        </div>
+                        <!-- end title -->
+                        <h2>Giàu kinh nghiệm</h2>
+                        <p class="aa">Tất cả các bác sĩ đều có chứng chỉ hành nghề đã xác thực, vững vàng về chuyên môn, phong phú về kinh nghiệm và tận tâm trong công việc.</p>
+
+                        <div class="footer-social">
+                            <!-- <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a> -->
+                        </div>
+                    </div>
+                    <!--widget -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeIn;">
+                    <div class="widget clearfix">
+                        <img src="images/5.12.2019..png" alt="" class="img-responsive img-rounded">
+                        <div class="widget-title">
+                            <!-- <h3>Bryan Saftler</h3>
+                            <small>Internal Diseases</small> -->
+                        </div>
+                        <!-- end title -->
+                        <h2>Chuyên nghiệp
+                            <h2>
+                                <p class="ab"> Các bác sĩ đều giỏi chuyên môn, tay nghề điều trị cao, thời gian dài công tác và giữ những chức vụ quan trọng tại các bệnh viện công lập lớn trên cả nước.</p>
+
+                                <div class="footer-social">
+                                    <!-- <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a> -->
+                                </div>
+                    </div>
+                    <!--widget -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn">
+                    <div class="widget clearfix">
+                        <img src="images/yduc.png" alt="" class="img-responsive img-rounded">
+                        <div class="widget-title">
+                            <!-- <h3>Matthew Bayliss</h3>
+                            <small>Orthopedics Expert</small> -->
+                        </div>
+                        <!-- end title -->
+                        <h2>Y đức tốt</h2>
+                        <p class="abc">Tinh thần trách nhiệm cao, hết lòng thương yêu chăm sóc người bệnh</p>
+
+                        <div class="footer-social">
+                            <!-- <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn grd1"><i class="fa fa-linkedin"></i></a> -->
+                        </div>
+                    </div>
+                    <!--widget -->
+                </div>
+                <!-- end col -->
+
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end doctor section -->
+
+    <div id="testimonials" class="section wb wow fadeIn">
+        <div class="container">
+            <div class="heading">
+                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+                <h2>Đánh giá</h2>
+            </div>
+            <!-- end title -->
+            <div class="row">
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i> Phòng khám tuyệt vời! Chăm sóc chu đáo!</h3>
+                            <p class="lead">Mùa dịch phải dãn cách, khó khăn trong việc đi lại, nhờ có bác sĩ tư vấn mình đã biết hướng điều trị cho bé. Cảm ơn các sĩ rất nhiều! </p>
+                        </div>
+                        <div class="testi-meta">
+                            <img src="images/a1.png" alt="" class="img-responsive alignleft">
+                            <h4>Trần Thị Phương <small>- Nhân viên kế toán</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i> Cảm ơn các bác sĩ rất nhiểu!</h3>
+                            <p class="lead">Rất tin tưởng lời khuyên của bác sỹ.Tôi và gia đình rất mừng vì qua trang web được bác sĩ tư vấn cặn kẽ, tận tình.Cảm ơn các bác sĩ rất nhiểu! </p>
+                        </div>
+                        <div class="testi-meta">
+                            <img src="images/images.png" alt="" class="img-responsive alignleft">
+                            <h4>Phạm Thị Bích Vân <small>- Nhân viên kinh doanh</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+            <hr class="invis">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i>Thật bất ngờ với chất lượng phục vụ! Rất chu đáo!</h3>
+                            <p class="lead">Bác sĩ tư vấn nhiệt tình, chỉ hướng điều trị đúng đắn ban đầu. Đội ngũ bác sĩ có tay nghề cao, giàu kinh nghiệm và chuyên nghiệp.</p>
+                        </div>
+                        <div class="testi-meta">
+                            <img src="images/a2.png" alt="" class="img-responsive alignleft">
+                            <h4>Nguyễn Trung Quân<small>- Huấn luyện viên thể hình</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+                <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                    <div class="testimonial clearfix">
+                        <div class="desc">
+                            <h3><i class="fa fa-quote-left"></i> Chất lượng tốt</h3>
+                            <p class="lead">Bác sĩ Duyên tư vấn tận tâm, nhiệt tình và giải quyết được đúng vấn đề bé và mẹ đang gặp phải. chúc bác sĩ thật nhiều sức khoẻ.</p>
+                        </div>
+                        <div class="testi-meta">
+                            <img src="images/anh4.png" alt="" class="img-responsive alignleft">
+                            <h4>Nguyễn Thế Mạnh <small>- Nhân viên IT</small></h4>
+                        </div>
+                        <!-- end testi-meta -->
+                    </div>
+                    <!-- end testimonial -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end section -->
+    </div>
+    <footer id="footer" class="footer-area wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo padding">
+                        <a href=""><img src="images/logo.png" alt=""></a>
+                        <p>Luôn chia sẻ giá trị tốt đẹp cho xã hội về chăm sóc sức khoẻ.Lấy y đức làm phương châm chữa bệnh.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-info padding">
+                        <h3>Liên hệ</h3>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> 381 Nguyễn Khang, Cầu Giấy, Hà Nội.</p>
+                        <p><i class="fa fa-paper-plane" aria-hidden="true"></i> dangphucnguyen0309@gmail.com</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i> (+84) 0965185562</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="subcriber-info">
+                        <h3>Đăng kí nhận thông tin</h3>
+                        <p>Nhận tin tức, mẹo, giải pháp cho các vấn đề về sức khỏe từ các chuyên gia.</p>
+                        <div class="subcriber-box">
+                            <form id="mc-form" class="mc-form">
+                                <div class="newsletter-form">
+                                    <input type="email" autocomplete="off" id="mc-email" placeholder="Email address" class="form-control" name="EMAIL">
+                                    <button class="mc-submit" type="submit"><i class="fa fa-paper-plane"></i></button>
+                                    <div class="clearfix"></div>
+                                    <!-- mailchimp-alerts Start -->
+                                    <div class="mailchimp-alerts">
+                                        <div class="mailchimp-submitting"></div>
+                                        <!-- mailchimp-submitting end -->
+                                        <div class="mailchimp-success"></div>
+                                        <!-- mailchimp-success end -->
+                                        <div class="mailchimp-error"></div>
+                                        <!-- mailchimp-error end -->
+                                    </div>
+                                    <!-- mailchimp-alerts end -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-area wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="footer-text">
+                        <p></p>
+                        <!--© 2018 Lifecare. All Rights Reserved.-->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="social">
+                        <ul class="social-links">
+                            <li><a href=""><i class="fa fa-rss"></i></a></li>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end copyrights -->
+    <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <!-- all js files -->
+    <script src="js/all.js"></script>
+    <!-- all plugins -->
+    <script src="js/custom.js"></script>
+    <!-- map -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script> -->
+</body>
+
+</html>
+
+
+<!-- Đăng Phúc Nguyễn  -->
+<!-- Đăng Phúc Nguyễn  -->
+<!-- Đăng Phúc Nguyễn  -->
+<!-- Đăng Phúc Nguyễn  -->
+<!-- Đăng Phúc Nguyễn  -->
+<!-- Đăng Phúc Nguyễn  -->
+<!-- Đăng Phúc Nguyễn  -->
+<!-- Đăng Phúc Nguyễn  -->
