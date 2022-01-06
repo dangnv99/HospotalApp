@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhambenh));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gcLichKham = new DevExpress.XtraGrid.GridControl();
             this.gvLichKham = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -560,6 +561,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1291, 620);
             this.Controls.Add(this.layoutControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormKhambenh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Khám bệnh";

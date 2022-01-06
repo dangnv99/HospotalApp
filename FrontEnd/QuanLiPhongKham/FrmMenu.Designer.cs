@@ -270,6 +270,7 @@
             this.barThanhToan.Id = 15;
             this.barThanhToan.LargeGlyph = global::QuanLiPhongKham.Properties.Resources.thanh_toan;
             this.barThanhToan.Name = "barThanhToan";
+            this.barThanhToan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barThanhToan_ItemClick);
             // 
             // barButtonItem14
             // 

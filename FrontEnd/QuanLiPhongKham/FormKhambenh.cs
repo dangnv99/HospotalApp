@@ -253,14 +253,14 @@ namespace QuanLiPhongKham
                 {
                     resultReq rs = new resultReq();
                     rs = JsonConvert.DeserializeObject<resultReq>(result);
-                    if (rs.msg.Contains("thành công"))
-                    {
+                    //if (rs.msg.Contains("thành công"))
+                    //{
                         DevExpress.XtraEditors.XtraMessageBox.Show("Lưu thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-                    }
-                    else
-                    {
-                        DevExpress.XtraEditors.XtraMessageBox.Show("Lưu thất bại thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu thất bại thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    //}
                 }
             }
             catch (Exception ex)
@@ -469,6 +469,7 @@ namespace QuanLiPhongKham
                     update.note2 = txtNote2.Text;
                     update.identityCard = getrolePatient_.data.FirstOrDefault().identityCard;
                     update.yearOfBirth = getrolePatient_.data.FirstOrDefault().yearOfBirth;
+                    update.identityCard = txtCMND.Text;
                     update.id = row.patientId;
                     if (chkNam.Checked == true)
                     {
@@ -493,6 +494,9 @@ namespace QuanLiPhongKham
                     wc.QueryString.Add("Status", "1");
                     var data_ = wc.UploadValues(url, "POST", wc.QueryString);
                     var responseString = UnicodeEncoding.UTF8.GetString(data_);
+                    GetdataPatient();
+                    LoadService();
+                    GetdataDoctor();
                     LoadSchedule();
                 }
             }

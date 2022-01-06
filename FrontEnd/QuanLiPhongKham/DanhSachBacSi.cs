@@ -30,7 +30,7 @@ namespace QuanLiPhongKham
         }
         responServicve service_;
         responUserRole getrole;
-       
+
         #region Ham gọi api
 
         public void call(UserCreat data_, string ServiceId)
@@ -185,7 +185,14 @@ namespace QuanLiPhongKham
             {
                 UserCreat data_ = new UserCreat();
                 data_.name = txtHoTen.Text;
-                data_.sex = txtGioiTinh.Text;
+                if (chkNam.Checked == true)
+                {
+                    data_.sex = "Nam";
+                }
+                else
+                {
+                    data_.sex = "Nữ";
+                }
                 data_.phone = txtSoDT.Text;
                 data_.address = txtDiaChi.Text;
                 data_.username = txtTaiKhoan.Text;
@@ -209,7 +216,7 @@ namespace QuanLiPhongKham
             }
             catch (Exception ex)
             {
-                Inventec.Common.Logging.LogSystem.Error(ex);                
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
 
@@ -221,7 +228,14 @@ namespace QuanLiPhongKham
                 UserCreat data_ = new UserCreat();
                 data_.id = data.id;
                 data_.name = txtHoTen.Text;
-                data_.sex = txtGioiTinh.Text;
+                if (chkNam.Checked == true)
+                {
+                    data_.sex = "Nam";
+                }
+                else
+                {
+                    data_.sex = "Nữ";
+                }
                 data_.phone = txtSoDT.Text;
                 data_.address = txtDiaChi.Text;
                 data_.username = txtTaiKhoan.Text;
@@ -259,15 +273,24 @@ namespace QuanLiPhongKham
         }
 
         private void gVDanhSachBacSi_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
-        {         
+        {
             try
             {
                 var data = (getUserlist)gVDanhSachBacSi.GetFocusedRow();
                 if (data != null)
                 {
 
-                    txtHoTen.Text = data.name  ;
-                    txtGioiTinh.Text = data.sex ;
+                    txtHoTen.Text = data.name;
+                    if (data.sex == "Nam")
+                    {
+                        chkNam.Checked = true;
+                        chkNu.Checked = false;
+                    }
+                    else
+                    {
+                        chkNam.Checked = false;
+                        chkNu.Checked = true;
+                    }
                     txtSoDT.Text = data.phone;
                     txtDiaChi.Text = data.address;
                     //txtTaiKhoan.Text = data.username ;
@@ -277,8 +300,8 @@ namespace QuanLiPhongKham
             }
             catch (Exception ex)
             {
-                Inventec.Common.Logging.LogSystem.Error(ex);                
-            }  
+                Inventec.Common.Logging.LogSystem.Error(ex);
+            }
         }
 
         private void txtHoTen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -287,7 +310,7 @@ namespace QuanLiPhongKham
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    txtGioiTinh.Focus();
+                    chkNam.Focus();
                 }
             }
             catch (Exception ex)
@@ -379,6 +402,21 @@ namespace QuanLiPhongKham
                 {
                     cboDichVuKham.Focus();
                     cboDichVuKham.ShowPopup();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
+
+        private void chkNu_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtNamSinh.Focus();
                 }
             }
             catch (Exception ex)

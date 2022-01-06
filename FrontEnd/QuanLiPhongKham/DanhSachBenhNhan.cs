@@ -22,7 +22,8 @@ namespace QuanLiPhongKham
             InitializeComponent();
         }
         responUserRole getrole;
-
+        static byte[] ImageBytes;
+        public string imagepath;
         #region Hàm xử lý gọi api
         public void Getdata()
         {
@@ -172,7 +173,7 @@ namespace QuanLiPhongKham
             }
             catch (Exception ex)
             {
-                Inventec.Common.Logging.LogSystem.Error(ex);                
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
 
@@ -186,17 +187,25 @@ namespace QuanLiPhongKham
                 creat.phone = txtPhone.Text;
                 if (ChkNam.Checked == true)
                 {
-                    creat.sex ="Nam";
+                    creat.sex = "Nam";
                 }
                 else
                 {
-                    creat.sex = "Nữ";    
+                    creat.sex = "Nữ";
                 }
                 creat.address = txtAddress.Text;
                 creat.identityCard = txtCMND.Text;
                 creat.yearOfBirth = txtDate.Text;
                 creat.username = RandomString(8);
                 creat.password = RandomString(8);
+                if (ImageBytes != null && ImageBytes.Count() > 0)
+                {
+                    creat.avatar = Convert.ToBase64String(ImageBytes);
+                }
+                else
+                {
+                    creat.avatar = null;
+                }
                 call(creat);
                 Getdata();
             }
@@ -227,7 +236,15 @@ namespace QuanLiPhongKham
                 update.address = txtAddress.Text;
                 update.identityCard = txtCMND.Text;
                 update.yearOfBirth = txtDate.Text;
-               // update.avatar = 
+                // update.avatar = 
+                if (ImageBytes != null && ImageBytes.Count() > 0)
+                {
+                    update.avatar = Convert.ToBase64String(ImageBytes);
+                }
+                else
+                {
+                    update.avatar = null;
+                }
                 callupate(update);
                 Getdata();
             }
@@ -288,12 +305,12 @@ namespace QuanLiPhongKham
                         {
                             pbPatient.Image = Base64ToImage(data.avatar);
                         }
-                        else 
+                        else
                         {
                             pbPatient.Image = null;
                             pbPatient.Image = global::QuanLiPhongKham.Properties.Resources.chu_the;
                         }
-                      
+
                     }
                 }
                 catch (Exception ex)
@@ -427,5 +444,47 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Warn(ex);
             }
         }
+
+        private void btnThemAnh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.CheckFileExists = true;
+                openFileDialog.AddExtension = true;
+                openFileDialog.Multiselect = true;
+                openFileDialog.Filter = "jpg files (*.jpg)|*.jpg|png files (*.png)|*.png";
+                if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    pbPatient.Image = new Bitmap(openFileDialog.FileName);
+                    //foreach (string fileName in openFileDialog.FileNames)
+                    //{
+                    ImageBytes = System.IO.File.ReadAllBytes(openFileDialog.FileName);
+                    imagepath = openFileDialog.FileName;
+
+                    this.Refresh();
+                    //}
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);
+            }
+        }
+
+        private void btnXoaAnh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                pbPatient.Image = null;
+                ImageBytes = null;
+                this.Refresh();
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);
+            }
+        }
+
     }
 }

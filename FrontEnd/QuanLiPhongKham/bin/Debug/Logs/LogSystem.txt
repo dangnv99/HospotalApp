@@ -376,3 +376,107 @@ System.InvalidOperationException: Cross-thread operation not valid: Control 'gcS
    at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
    at QuanLiPhongKham.FormLichKham.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 186
 
+INFO 2022-01-06 14:25:38,895 [9] - OnApplicationStart. Time=06:01:2022 14:25:38
+
+ERROR 2022-01-06 14:25:52,622 [17] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcShedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.AccessibilityNotifyClients(AccessibleEvents accEvent, Int32 objectID, Int32 childID)
+   at DevExpress.XtraGrid.GridControl.AccessibleNotifyClients(AccessibleEvents accEvents, Int32 childID)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.AccessibleNotifyClients(Int32 row, GridColumn focusedCol)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.RaiseFocusedRowChanged(Int32 prevFocused, Int32 focusedRowHandle)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoChangeFocusedRowInternal(Int32 newRowHandle, Boolean updateCurrentRow)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DevExpress.Data.IDataControllerCurrentSupport.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanged()
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanging(Int32 oldControllerRow, Int32 newControllerRow)
+   at DevExpress.Data.BaseGridController.set_CurrentControllerRow(Int32 value)
+   at DevExpress.Data.BaseGridController.ResetCurrentPosition()
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormKeDonThuoc.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 212
+
+ERROR 2022-01-06 14:26:46,263 [21] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcShedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.AccessibilityNotifyClients(AccessibleEvents accEvent, Int32 objectID, Int32 childID)
+   at DevExpress.XtraGrid.GridControl.AccessibleNotifyClients(AccessibleEvents accEvents, Int32 childID)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.AccessibleNotifyClients(Int32 row, GridColumn focusedCol)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.RaiseFocusedRowChanged(Int32 prevFocused, Int32 focusedRowHandle)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoChangeFocusedRowInternal(Int32 newRowHandle, Boolean updateCurrentRow)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DevExpress.Data.IDataControllerCurrentSupport.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanged()
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanging(Int32 oldControllerRow, Int32 newControllerRow)
+   at DevExpress.Data.BaseGridController.set_CurrentControllerRow(Int32 value)
+   at DevExpress.Data.BaseGridController.ResetCurrentPosition()
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormKeDonThuoc.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 212
+
+INFO 2022-01-06 14:28:09,853 [9] - OnApplicationStart. Time=06:01:2022 14:28:09
+
+ERROR 2022-01-06 14:29:17,055 [20] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcShedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.AccessibilityNotifyClients(AccessibleEvents accEvent, Int32 objectID, Int32 childID)
+   at DevExpress.XtraGrid.GridControl.AccessibleNotifyClients(AccessibleEvents accEvents, Int32 childID)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.AccessibleNotifyClients(Int32 row, GridColumn focusedCol)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.RaiseFocusedRowChanged(Int32 prevFocused, Int32 focusedRowHandle)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoChangeFocusedRowInternal(Int32 newRowHandle, Boolean updateCurrentRow)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DevExpress.Data.IDataControllerCurrentSupport.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanged()
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanging(Int32 oldControllerRow, Int32 newControllerRow)
+   at DevExpress.Data.BaseGridController.set_CurrentControllerRow(Int32 value)
+   at DevExpress.Data.BaseGridController.ResetCurrentPosition()
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormKeDonThuoc.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 212
+
+INFO 2022-01-06 14:31:11,646 [9] - OnApplicationStart. Time=06:01:2022 14:31:11
+
+ERROR 2022-01-06 14:31:54,680 [18] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcShedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.AccessibilityNotifyClients(AccessibleEvents accEvent, Int32 objectID, Int32 childID)
+   at DevExpress.XtraGrid.GridControl.AccessibleNotifyClients(AccessibleEvents accEvents, Int32 childID)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.AccessibleNotifyClients(Int32 row, GridColumn focusedCol)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.RaiseFocusedRowChanged(Int32 prevFocused, Int32 focusedRowHandle)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoChangeFocusedRowInternal(Int32 newRowHandle, Boolean updateCurrentRow)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DevExpress.Data.IDataControllerCurrentSupport.OnCurrentControllerRowChanged(CurrentRowEventArgs e)
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanged()
+   at DevExpress.Data.BaseGridController.OnCurrentControllerRowChanging(Int32 oldControllerRow, Int32 newControllerRow)
+   at DevExpress.Data.BaseGridController.set_CurrentControllerRow(Int32 value)
+   at DevExpress.Data.BaseGridController.ResetCurrentPosition()
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormKeDonThuoc.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 212
+
+INFO 2022-01-06 15:40:04,947 [9] - OnApplicationStart. Time=06:01:2022 15:40:04
+
+INFO 2022-01-06 16:08:24,591 [10] - OnApplicationStart. Time=06:01:2022 16:08:24
+
+INFO 2022-01-06 16:19:51,974 [10] - OnApplicationStart. Time=06:01:2022 16:19:51
+
+INFO 2022-01-06 16:28:01,016 [10] - OnApplicationStart. Time=06:01:2022 16:28:01
+
+INFO 2022-01-06 16:37:49,347 [10] - OnApplicationStart. Time=06:01:2022 16:37:49
+

@@ -172,6 +172,21 @@ namespace QuanLiPhongKham
             
         }
 
+        private void barThanhToan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            try
+            {
+                FormThanhToan fr = new FormThanhToan();
+                fr.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+            
+        }
+
         
     }
 }

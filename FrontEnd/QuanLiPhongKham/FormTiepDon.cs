@@ -217,6 +217,7 @@ namespace QuanLiPhongKham
                     creat.avatar = Convert.ToBase64String(ImageBytes);
                 }
 
+
                 call(creat);
 
             }

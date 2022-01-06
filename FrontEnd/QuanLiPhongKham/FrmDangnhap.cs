@@ -44,9 +44,9 @@ namespace QuanLiPhongKham
                 var client = new HttpClient();
                 var response = client.PostAsync(url, data).Result;
                 string result = response.Content.ReadAsStringAsync().Result;
-                 getrole_ = new responUserRole();
+                getrole_ = new responUserRole();
                 getrole_ = Inventec.WCF.JsonConvert.JsonConvert.Deserialize<responUserRole>(result);
-          
+
 
             }
             catch (Exception ex)
@@ -69,19 +69,19 @@ namespace QuanLiPhongKham
             //fr.ShowDialog();
             if (!string.IsNullOrEmpty(txtTaiKhoan.Text) && !string.IsNullOrEmpty(txtMatKhau.Text))
             {
-              var check =   getrole_.data.Where(o => o.userName == txtTaiKhoan.Text).Where(o => o.passWord == txtMatKhau.Text);
-              if (check != null && check.Count() > 0)
+                var check = getrole_.data.Where(o => o.userName == txtTaiKhoan.Text).Where(o => o.passWord == txtMatKhau.Text);
+                if (check != null && check.Count() > 0)
                 {
                     FrmMenu fr = new FrmMenu();
                     fr.ShowDialog();
                     this.Hide();
                     this.Close();
                 }
-              else
-              {
-                  DevExpress.XtraEditors.XtraMessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-              }
-                
+                else
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                }
+
             }
             else
             {
