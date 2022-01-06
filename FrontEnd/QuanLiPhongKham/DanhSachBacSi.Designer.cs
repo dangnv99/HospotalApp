@@ -119,6 +119,7 @@
             this.txtNamSinh.Size = new System.Drawing.Size(223, 20);
             this.txtNamSinh.StyleController = this.layoutControl1;
             this.txtNamSinh.TabIndex = 16;
+            this.txtNamSinh.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtNamSinh_PreviewKeyDown);
             // 
             // txtDiaChi
             // 
@@ -127,6 +128,7 @@
             this.txtDiaChi.Size = new System.Drawing.Size(223, 20);
             this.txtDiaChi.StyleController = this.layoutControl1;
             this.txtDiaChi.TabIndex = 15;
+            this.txtDiaChi.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtDiaChi_PreviewKeyDown);
             // 
             // cboDichVuKham
             // 
@@ -154,6 +156,7 @@
             this.txtMK.Size = new System.Drawing.Size(223, 20);
             this.txtMK.StyleController = this.layoutControl1;
             this.txtMK.TabIndex = 13;
+            this.txtMK.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtMK_PreviewKeyDown);
             // 
             // txtTaiKhoan
             // 
@@ -162,6 +165,7 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(223, 20);
             this.txtTaiKhoan.StyleController = this.layoutControl1;
             this.txtTaiKhoan.TabIndex = 12;
+            this.txtTaiKhoan.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtTaiKhoan_PreviewKeyDown);
             // 
             // btnXoa
             // 
@@ -200,6 +204,7 @@
             this.txtSoDT.Size = new System.Drawing.Size(223, 20);
             this.txtSoDT.StyleController = this.layoutControl1;
             this.txtSoDT.TabIndex = 8;
+            this.txtSoDT.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtSoDT_PreviewKeyDown);
             // 
             // txtGioiTinh
             // 
@@ -208,6 +213,7 @@
             this.txtGioiTinh.Size = new System.Drawing.Size(223, 20);
             this.txtGioiTinh.StyleController = this.layoutControl1;
             this.txtGioiTinh.TabIndex = 6;
+            this.txtGioiTinh.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtGioiTinh_PreviewKeyDown);
             // 
             // txtHoTen
             // 
@@ -216,6 +222,7 @@
             this.txtHoTen.Size = new System.Drawing.Size(223, 20);
             this.txtHoTen.StyleController = this.layoutControl1;
             this.txtHoTen.TabIndex = 5;
+            this.txtHoTen.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtHoTen_PreviewKeyDown);
             // 
             // gcdanhsachbacsi
             // 

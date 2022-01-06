@@ -514,5 +514,54 @@ namespace QuanLiPhongKham
             }
 
         }
+
+        private void txtPatient_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    cboService.Focus();
+                    cboService.ShowPopup();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
+
+        private void cboService_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    cboDoctor.Focus();
+                    cboDoctor.ShowPopup();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
+
+        private void cboDoctor_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtLichKham.Focus();
+                    txtLichKham.ShowPopup();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
+
     }
 }

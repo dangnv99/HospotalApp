@@ -134,6 +134,7 @@
             this.cboDoctor.Size = new System.Drawing.Size(364, 20);
             this.cboDoctor.StyleController = this.layoutControl1;
             this.cboDoctor.TabIndex = 15;
+            this.cboDoctor.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cboDoctor_PreviewKeyDown);
             // 
             // gridLookUpEdit2View
             // 
@@ -154,6 +155,7 @@
             this.cboService.StyleController = this.layoutControl1;
             this.cboService.TabIndex = 14;
             this.cboService.EditValueChanged += new System.EventHandler(this.cboService_EditValueChanged);
+            this.cboService.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cboService_PreviewKeyDown);
             // 
             // gridLookUpEdit1View
             // 
@@ -219,6 +221,7 @@
             this.txtPatient.Size = new System.Drawing.Size(364, 20);
             this.txtPatient.StyleController = this.layoutControl1;
             this.txtPatient.TabIndex = 5;
+            this.txtPatient.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtPatient_PreviewKeyDown);
             // 
             // gcSchedule
             // 

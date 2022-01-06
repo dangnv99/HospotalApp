@@ -307,7 +307,8 @@ namespace QuanLiPhongKham
                 GetdataPatient();
                 LoadService();
                 GetdataDoctor();
-                thread();
+                LoadSchedule();
+               // thread();
             }
             catch (Exception ex)
             {
@@ -440,6 +441,7 @@ namespace QuanLiPhongKham
                         chkNam.Checked = false;
                         chkNu.Checked = true;
                     }
+                    txtNote1.Focus();
                 }
             }
 
@@ -497,6 +499,21 @@ namespace QuanLiPhongKham
             catch (Exception ex)
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
+            }
+        }
+
+        private void txtNote1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtNote2.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
             }
         }
     }

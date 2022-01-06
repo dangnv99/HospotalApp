@@ -206,5 +206,65 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
+        private void txtUnit_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtNameMedicine.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
+
+        private void txtNameMedicine_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtUseMedicine.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
+
+        private void txtUseMedicine_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtQuantily.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
+
+        private void txtQuantily_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtPriceMedicine.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
     }
 }

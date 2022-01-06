@@ -127,6 +127,7 @@
             this.ChkNu.Size = new System.Drawing.Size(95, 19);
             this.ChkNu.StyleController = this.layoutControl1;
             this.ChkNu.TabIndex = 17;
+            this.ChkNu.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.ChkNu_PreviewKeyDown);
             // 
             // ChkNam
             // 
@@ -136,6 +137,7 @@
             this.ChkNam.Size = new System.Drawing.Size(144, 19);
             this.ChkNam.StyleController = this.layoutControl1;
             this.ChkNam.TabIndex = 16;
+            this.ChkNam.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.ChkNam_PreviewKeyDown);
             // 
             // pbPatient
             // 
@@ -156,6 +158,7 @@
             this.txtjob.Size = new System.Drawing.Size(243, 20);
             this.txtjob.StyleController = this.layoutControl1;
             this.txtjob.TabIndex = 14;
+            this.txtjob.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtjob_PreviewKeyDown);
             // 
             // txtCMND
             // 
@@ -172,6 +175,7 @@
             this.txtAddress.Size = new System.Drawing.Size(243, 20);
             this.txtAddress.StyleController = this.layoutControl1;
             this.txtAddress.TabIndex = 12;
+            this.txtAddress.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtAddress_PreviewKeyDown);
             // 
             // btnXoa
             // 
@@ -210,6 +214,7 @@
             this.txtPhone.Size = new System.Drawing.Size(243, 20);
             this.txtPhone.StyleController = this.layoutControl1;
             this.txtPhone.TabIndex = 8;
+            this.txtPhone.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtPhone_PreviewKeyDown);
             // 
             // txtDate
             // 
@@ -218,6 +223,7 @@
             this.txtDate.Size = new System.Drawing.Size(243, 20);
             this.txtDate.StyleController = this.layoutControl1;
             this.txtDate.TabIndex = 7;
+            this.txtDate.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtDate_PreviewKeyDown);
             // 
             // txtName
             // 
@@ -226,6 +232,7 @@
             this.txtName.Size = new System.Drawing.Size(243, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
+            this.txtName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtName_PreviewKeyDown);
             // 
             // gdPatient
             // 

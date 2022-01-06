@@ -254,6 +254,7 @@
             this.txtNote1.Size = new System.Drawing.Size(609, 150);
             this.txtNote1.StyleController = this.layoutControl3;
             this.txtNote1.TabIndex = 4;
+            this.txtNote1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtNote1_PreviewKeyDown);
             // 
             // layoutControlGroup3
             // 

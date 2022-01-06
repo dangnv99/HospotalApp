@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTiepDon));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.chkNu = new DevExpress.XtraEditors.CheckEdit();
+            this.chkNam = new DevExpress.XtraEditors.CheckEdit();
             this.txtNamSinh = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress = new DevExpress.XtraEditors.TextEdit();
             this.txtDateLichKham = new DevExpress.XtraEditors.DateEdit();
@@ -59,12 +61,12 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtyearofborn = new DevExpress.XtraLayout.LayoutControlItem();
-            this.chkNam = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.chkNu = new DevExpress.XtraEditors.CheckEdit();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkNu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkNam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamSinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateLichKham.Properties.CalendarTimeProperties)).BeginInit();
@@ -92,9 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtyearofborn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +123,26 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // chkNu
+            // 
+            this.chkNu.Location = new System.Drawing.Point(339, 36);
+            this.chkNu.Name = "chkNu";
+            this.chkNu.Properties.Caption = "Nữ";
+            this.chkNu.Size = new System.Drawing.Size(222, 19);
+            this.chkNu.StyleController = this.layoutControl1;
+            this.chkNu.TabIndex = 24;
+            this.chkNu.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.chkNu_PreviewKeyDown);
+            // 
+            // chkNam
+            // 
+            this.chkNam.Location = new System.Drawing.Point(275, 36);
+            this.chkNam.Name = "chkNam";
+            this.chkNam.Properties.Caption = "Nam";
+            this.chkNam.Size = new System.Drawing.Size(60, 19);
+            this.chkNam.StyleController = this.layoutControl1;
+            this.chkNam.TabIndex = 23;
+            this.chkNam.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.chkNam_PreviewKeyDown);
+            // 
             // txtNamSinh
             // 
             this.txtNamSinh.Location = new System.Drawing.Point(275, 59);
@@ -130,6 +150,7 @@
             this.txtNamSinh.Size = new System.Drawing.Size(286, 20);
             this.txtNamSinh.StyleController = this.layoutControl1;
             this.txtNamSinh.TabIndex = 22;
+            this.txtNamSinh.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtNamSinh_PreviewKeyDown);
             // 
             // txtAddress
             // 
@@ -138,6 +159,7 @@
             this.txtAddress.Size = new System.Drawing.Size(286, 20);
             this.txtAddress.StyleController = this.layoutControl1;
             this.txtAddress.TabIndex = 21;
+            this.txtAddress.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtAddress_PreviewKeyDown);
             // 
             // txtDateLichKham
             // 
@@ -208,6 +230,7 @@
             this.cboDoctor.Size = new System.Drawing.Size(286, 20);
             this.cboDoctor.StyleController = this.layoutControl1;
             this.cboDoctor.TabIndex = 15;
+            this.cboDoctor.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cboDoctor_PreviewKeyDown);
             // 
             // gridLookUpEdit2View
             // 
@@ -228,6 +251,7 @@
             this.cboService.StyleController = this.layoutControl1;
             this.cboService.TabIndex = 14;
             this.cboService.EditValueChanged += new System.EventHandler(this.cboService_EditValueChanged);
+            this.cboService.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cboService_PreviewKeyDown);
             // 
             // gridLookUpEdit1View
             // 
@@ -243,6 +267,7 @@
             this.txtJob.Size = new System.Drawing.Size(286, 20);
             this.txtJob.StyleController = this.layoutControl1;
             this.txtJob.TabIndex = 11;
+            this.txtJob.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtJob_PreviewKeyDown);
             // 
             // txtCMND
             // 
@@ -251,6 +276,7 @@
             this.txtCMND.Size = new System.Drawing.Size(286, 20);
             this.txtCMND.StyleController = this.layoutControl1;
             this.txtCMND.TabIndex = 9;
+            this.txtCMND.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtCMND_PreviewKeyDown);
             // 
             // txtPhone
             // 
@@ -259,6 +285,7 @@
             this.txtPhone.Size = new System.Drawing.Size(286, 20);
             this.txtPhone.StyleController = this.layoutControl1;
             this.txtPhone.TabIndex = 6;
+            this.txtPhone.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtPhone_PreviewKeyDown);
             // 
             // txtName
             // 
@@ -267,6 +294,7 @@
             this.txtName.Size = new System.Drawing.Size(286, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
+            this.txtName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtName_PreviewKeyDown);
             // 
             // layoutControlGroup1
             // 
@@ -410,15 +438,6 @@
             this.txtyearofborn.Text = "Năm sinh:";
             this.txtyearofborn.TextSize = new System.Drawing.Size(80, 13);
             // 
-            // chkNam
-            // 
-            this.chkNam.Location = new System.Drawing.Point(275, 36);
-            this.chkNam.Name = "chkNam";
-            this.chkNam.Properties.Caption = "Nam";
-            this.chkNam.Size = new System.Drawing.Size(60, 19);
-            this.chkNam.StyleController = this.layoutControl1;
-            this.chkNam.TabIndex = 23;
-            // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.chkNam;
@@ -427,15 +446,6 @@
             this.layoutControlItem10.Size = new System.Drawing.Size(147, 23);
             this.layoutControlItem10.Text = "Giới tính:";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(80, 13);
-            // 
-            // chkNu
-            // 
-            this.chkNu.Location = new System.Drawing.Point(339, 36);
-            this.chkNu.Name = "chkNu";
-            this.chkNu.Properties.Caption = "Nữ";
-            this.chkNu.Size = new System.Drawing.Size(222, 19);
-            this.chkNu.StyleController = this.layoutControl1;
-            this.chkNu.TabIndex = 24;
             // 
             // layoutControlItem15
             // 
@@ -459,6 +469,8 @@
             this.Load += new System.EventHandler(this.FormTiepDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chkNu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkNam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamSinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateLichKham.Properties.CalendarTimeProperties)).EndInit();
@@ -486,9 +498,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtyearofborn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             this.ResumeLayout(false);
 

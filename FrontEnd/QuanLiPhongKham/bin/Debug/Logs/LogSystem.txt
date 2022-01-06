@@ -98,3 +98,27 @@ ERROR 2022-01-06 00:51:04,142 [1] -
 System.NullReferenceException: Object reference not set to an instance of an object.
    at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
 
+INFO 2022-01-06 10:42:17,831 [1] - OnApplicationStart. Time=06:01:2022 10:42:17
+
+ERROR 2022-01-06 10:42:43,996 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-06 10:42:45,452 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-06 10:42:45,934 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-06 10:43:33,966 [16] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 331
+
+INFO 2022-01-06 10:44:31,654 [1] - OnApplicationStart. Time=06:01:2022 10:44:31
+
+ERROR 2022-01-06 10:44:40,163 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+

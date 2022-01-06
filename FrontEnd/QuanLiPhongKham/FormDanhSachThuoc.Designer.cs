@@ -134,6 +134,7 @@
             this.txtUseMedicine.Size = new System.Drawing.Size(315, 188);
             this.txtUseMedicine.StyleController = this.layoutControl1;
             this.txtUseMedicine.TabIndex = 10;
+            this.txtUseMedicine.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtUseMedicine_PreviewKeyDown);
             // 
             // txtPriceMedicine
             // 
@@ -150,6 +151,7 @@
             this.txtQuantily.Size = new System.Drawing.Size(315, 20);
             this.txtQuantily.StyleController = this.layoutControl1;
             this.txtQuantily.TabIndex = 8;
+            this.txtQuantily.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtQuantily_PreviewKeyDown);
             // 
             // txtNameMedicine
             // 
@@ -158,6 +160,7 @@
             this.txtNameMedicine.Size = new System.Drawing.Size(315, 20);
             this.txtNameMedicine.StyleController = this.layoutControl1;
             this.txtNameMedicine.TabIndex = 6;
+            this.txtNameMedicine.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtNameMedicine_PreviewKeyDown);
             // 
             // txtUnit
             // 
@@ -166,6 +169,7 @@
             this.txtUnit.Size = new System.Drawing.Size(315, 20);
             this.txtUnit.StyleController = this.layoutControl1;
             this.txtUnit.TabIndex = 5;
+            this.txtUnit.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtUnit_PreviewKeyDown);
             // 
             // gcMedicine
             // 
