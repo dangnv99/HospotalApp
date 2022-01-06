@@ -412,5 +412,20 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Warn(ex);
             }
         }
+
+        private void txtCMND_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtjob.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
+        }
     }
 }

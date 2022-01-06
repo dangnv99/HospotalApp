@@ -142,6 +142,7 @@ namespace QuanLiPhongKham
                 {
                     txtName.Text = data.name;
                     txtprice.Text = data.price.ToString();
+                    txtName.Focus();
                 }
 
             }
@@ -196,6 +197,21 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
 
+        }
+
+        private void txtName_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    txtprice.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Warn(ex);
+            }
         }
 
     }

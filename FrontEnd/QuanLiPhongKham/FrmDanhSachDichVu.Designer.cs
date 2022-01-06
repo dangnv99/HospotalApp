@@ -122,6 +122,7 @@
             this.txtName.Size = new System.Drawing.Size(131, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
+            this.txtName.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtName_PreviewKeyDown);
             // 
             // grcDanhSachDichVu
             // 

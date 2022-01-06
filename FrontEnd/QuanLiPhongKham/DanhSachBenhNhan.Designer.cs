@@ -167,6 +167,7 @@
             this.txtCMND.Size = new System.Drawing.Size(243, 20);
             this.txtCMND.StyleController = this.layoutControl1;
             this.txtCMND.TabIndex = 13;
+            this.txtCMND.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtCMND_PreviewKeyDown);
             // 
             // txtAddress
             // 
