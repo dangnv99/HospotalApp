@@ -22,7 +22,7 @@ namespace QuanLiPhongKham.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace QuanLiPhongKham.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("QuanLiPhongKham.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace QuanLiPhongKham.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _250727553_919521872023920_3186547377105715242_n {
+        public static System.Drawing.Bitmap _250727553_919521872023920_3186547377105715242_n {
             get {
                 object obj = ResourceManager.GetObject("250727553_919521872023920_3186547377105715242_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap App_login_manager_icon {
+        public static System.Drawing.Bitmap App_login_manager_icon {
             get {
                 object obj = ResourceManager.GetObject("App-login-manager-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,17 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap chu_the {
+        public static System.Drawing.Bitmap bidv {
+            get {
+                object obj = ResourceManager.GetObject("bidv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap chu_the {
             get {
                 object obj = ResourceManager.GetObject("chu-the", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +103,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap default_share {
+        public static System.Drawing.Bitmap default_share {
             get {
                 object obj = ResourceManager.GetObject("default_share", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +113,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Doctor {
+        public static System.Drawing.Bitmap Doctor {
             get {
                 object obj = ResourceManager.GetObject("Doctor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +123,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap doctor_icon {
+        public static System.Drawing.Bitmap doctor_icon {
             get {
                 object obj = ResourceManager.GetObject("doctor-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +133,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Khambenh {
+        public static System.Drawing.Bitmap Khambenh {
             get {
                 object obj = ResourceManager.GetObject("Khambenh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +143,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kho {
+        public static System.Drawing.Bitmap kho {
             get {
                 object obj = ResourceManager.GetObject("kho", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +153,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap marketingyte_com___logo_bo_y_te_viet_nam_PNG {
+        public static System.Drawing.Bitmap marketingyte_com___logo_bo_y_te_viet_nam_PNG {
             get {
                 object obj = ResourceManager.GetObject("marketingyte.com - logo bo y te viet nam PNG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +163,17 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Patients_icon {
+        public static System.Drawing.Bitmap momo {
+            get {
+                object obj = ResourceManager.GetObject("momo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Patients_icon {
             get {
                 object obj = ResourceManager.GetObject("Patients-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +183,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap thanh_toan {
+        public static System.Drawing.Bitmap thanh_toan {
             get {
                 object obj = ResourceManager.GetObject("thanh-toan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +193,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap thông_điệp_5k {
+        public static System.Drawing.Bitmap thông_điệp_5k {
             get {
                 object obj = ResourceManager.GetObject("thông điệp 5k", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +203,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap vi_khuan {
+        public static System.Drawing.Bitmap vi_khuan {
             get {
                 object obj = ResourceManager.GetObject("vi-khuan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +213,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap virus_corona_coronavirus_icon_140473 {
+        public static System.Drawing.Bitmap virus_corona_coronavirus_icon_140473 {
             get {
                 object obj = ResourceManager.GetObject("virus_corona_coronavirus_icon_140473", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +223,7 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap virus_covid_corona_hand_drug_drugs_medical_icon_141770 {
+        public static System.Drawing.Bitmap virus_covid_corona_hand_drug_drugs_medical_icon_141770 {
             get {
                 object obj = ResourceManager.GetObject("virus_covid_corona_hand_drug_drugs_medical_icon_141770", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,9 +233,19 @@ namespace QuanLiPhongKham.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap virus_covid_corona_hand_drug_drugs_medical_icon_1417701 {
+        public static System.Drawing.Bitmap virus_covid_corona_hand_drug_drugs_medical_icon_1417701 {
             get {
                 object obj = ResourceManager.GetObject("virus_covid_corona_hand_drug_drugs_medical_icon_1417701", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap vnpay {
+            get {
+                object obj = ResourceManager.GetObject("vnpay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

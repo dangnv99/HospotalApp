@@ -146,3 +146,4 @@ F:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\obj\Debug\QuanLiPhongKham.Pr
 F:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\obj\Debug\QuanLiPhongKham.XRDesignRibbonControllerResources.resources
 F:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\obj\Debug\QuanLiPhongKham.csproj.GenerateResource.Cache
 F:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\obj\Debug\QuanLiPhongKham.exe.licenses
+F:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\obj\Debug\QuanLiPhongKham.PayOnline.resources

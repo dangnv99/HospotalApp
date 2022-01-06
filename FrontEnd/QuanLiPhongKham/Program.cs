@@ -22,6 +22,7 @@ namespace QuanLiPhongKham
             log4net.Config.DOMConfigurator.Configure();
             LogSystem.Info("OnApplicationStart. Time=" + DateTime.Now.ToString("dd:MM:yyyy HH:mm:ss"));
             Application.Run(new FrmDangNhap());
+            
         }
     }
 }

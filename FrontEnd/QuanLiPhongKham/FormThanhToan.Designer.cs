@@ -30,8 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThanhToan));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.gcSchedule = new DevExpress.XtraGrid.GridControl();
+            this.gvSchedule = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
+            this.chkVnPay = new DevExpress.XtraEditors.CheckEdit();
+            this.chkMomo = new DevExpress.XtraEditors.CheckEdit();
+            this.chkQrBIDV = new DevExpress.XtraEditors.CheckEdit();
+            this.chkTienMat = new DevExpress.XtraEditors.CheckEdit();
             this.btnThanhToan = new DevExpress.XtraEditors.SimpleButton();
             this.gcMedicine = new DevExpress.XtraGrid.GridControl();
             this.gvMedicine = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -46,9 +57,16 @@
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.txtNote2 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtNote1 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtCMND = new DevExpress.XtraEditors.TextEdit();
             this.chkNu = new DevExpress.XtraEditors.CheckEdit();
             this.chkNam = new DevExpress.XtraEditors.CheckEdit();
             this.txtAddress = new DevExpress.XtraEditors.TextEdit();
@@ -66,28 +84,24 @@
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gcSchedule = new DevExpress.XtraGrid.GridControl();
-            this.gvSchedule = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtCMND = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtNote1 = new DevExpress.XtraEditors.MemoEdit();
-            this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtNote2 = new DevExpress.XtraEditors.MemoEdit();
-            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSchedule)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chkVnPay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkMomo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQrBIDV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkTienMat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMedicine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMedicine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcService)).BeginInit();
@@ -96,10 +110,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkNu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkNam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
@@ -117,18 +138,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNote1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNote2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -144,6 +160,86 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // gcSchedule
+            // 
+            this.gcSchedule.Location = new System.Drawing.Point(12, 12);
+            this.gcSchedule.MainView = this.gvSchedule;
+            this.gcSchedule.Name = "gcSchedule";
+            this.gcSchedule.Size = new System.Drawing.Size(544, 609);
+            this.gcSchedule.TabIndex = 6;
+            this.gcSchedule.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvSchedule});
+            // 
+            // gvSchedule
+            // 
+            this.gvSchedule.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10});
+            this.gvSchedule.GridControl = this.gcSchedule;
+            this.gvSchedule.Name = "gvSchedule";
+            this.gvSchedule.OptionsView.ShowGroupPanel = false;
+            this.gvSchedule.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvSchedule_RowCellClick);
+            this.gvSchedule.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvSchedule_RowCellStyle);
+            this.gvSchedule.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gvSchedule_CustomUnboundColumnData);
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Bệnh nhân";
+            this.gridColumn6.FieldName = "PatientName";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
+            this.gridColumn6.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 0;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Bác sĩ phụ trách";
+            this.gridColumn7.FieldName = "DoctorName";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
+            this.gridColumn7.OptionsColumn.ReadOnly = true;
+            this.gridColumn7.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 1;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Dịch vụ khám";
+            this.gridColumn8.FieldName = "ScheduleService";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
+            this.gridColumn8.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 2;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Lịch khám";
+            this.gridColumn9.FieldName = "DateSchedule";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
+            this.gridColumn9.OptionsColumn.ReadOnly = true;
+            this.gridColumn9.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 3;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Trạng thái";
+            this.gridColumn10.FieldName = "statusSTR";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.AllowEdit = false;
+            this.gridColumn10.OptionsColumn.ReadOnly = true;
+            this.gridColumn10.UnboundType = DevExpress.Data.UnboundColumnType.Object;
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 4;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.layoutControl3);
@@ -156,6 +252,10 @@
             // 
             // layoutControl3
             // 
+            this.layoutControl3.Controls.Add(this.chkVnPay);
+            this.layoutControl3.Controls.Add(this.chkMomo);
+            this.layoutControl3.Controls.Add(this.chkQrBIDV);
+            this.layoutControl3.Controls.Add(this.chkTienMat);
             this.layoutControl3.Controls.Add(this.btnThanhToan);
             this.layoutControl3.Controls.Add(this.gcMedicine);
             this.layoutControl3.Controls.Add(this.gcService);
@@ -167,21 +267,74 @@
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
+            // chkVnPay
+            // 
+            this.chkVnPay.Location = new System.Drawing.Point(594, 303);
+            this.chkVnPay.Name = "chkVnPay";
+            this.chkVnPay.Properties.Caption = "Ví VNPay";
+            this.chkVnPay.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.chkVnPay.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            this.chkVnPay.Properties.RadioGroupIndex = 1;
+            this.chkVnPay.Size = new System.Drawing.Size(64, 19);
+            this.chkVnPay.StyleController = this.layoutControl3;
+            this.chkVnPay.TabIndex = 10;
+            this.chkVnPay.TabStop = false;
+            // 
+            // chkMomo
+            // 
+            this.chkMomo.Location = new System.Drawing.Point(529, 303);
+            this.chkMomo.Name = "chkMomo";
+            this.chkMomo.Properties.Caption = "Ví Momo";
+            this.chkMomo.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.chkMomo.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            this.chkMomo.Properties.RadioGroupIndex = 1;
+            this.chkMomo.Size = new System.Drawing.Size(61, 19);
+            this.chkMomo.StyleController = this.layoutControl3;
+            this.chkMomo.TabIndex = 9;
+            this.chkMomo.TabStop = false;
+            // 
+            // chkQrBIDV
+            // 
+            this.chkQrBIDV.Location = new System.Drawing.Point(462, 303);
+            this.chkQrBIDV.Name = "chkQrBIDV";
+            this.chkQrBIDV.Properties.Caption = "QR BIDV";
+            this.chkQrBIDV.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.chkQrBIDV.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            this.chkQrBIDV.Properties.RadioGroupIndex = 1;
+            this.chkQrBIDV.Size = new System.Drawing.Size(63, 19);
+            this.chkQrBIDV.StyleController = this.layoutControl3;
+            this.chkQrBIDV.TabIndex = 8;
+            this.chkQrBIDV.TabStop = false;
+            // 
+            // chkTienMat
+            // 
+            this.chkTienMat.Location = new System.Drawing.Point(395, 303);
+            this.chkTienMat.Name = "chkTienMat";
+            this.chkTienMat.Properties.Caption = "Tiền mặt";
+            this.chkTienMat.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.chkTienMat.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            this.chkTienMat.Properties.RadioGroupIndex = 1;
+            this.chkTienMat.Size = new System.Drawing.Size(63, 19);
+            this.chkTienMat.StyleController = this.layoutControl3;
+            this.chkTienMat.TabIndex = 7;
+            this.chkTienMat.TabStop = false;
+            // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Location = new System.Drawing.Point(668, 303);
+            this.btnThanhToan.Location = new System.Drawing.Point(662, 303);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(68, 22);
+            this.btnThanhToan.Size = new System.Drawing.Size(74, 22);
             this.btnThanhToan.StyleController = this.layoutControl3;
             this.btnThanhToan.TabIndex = 6;
             this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // gcMedicine
             // 
-            this.gcMedicine.Location = new System.Drawing.Point(352, 2);
+            this.gcMedicine.Location = new System.Drawing.Point(216, 2);
             this.gcMedicine.MainView = this.gvMedicine;
             this.gcMedicine.Name = "gcMedicine";
-            this.gcMedicine.Size = new System.Drawing.Size(384, 297);
+            this.gcMedicine.Size = new System.Drawing.Size(520, 297);
             this.gcMedicine.TabIndex = 5;
             this.gcMedicine.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMedicine});
@@ -222,7 +375,7 @@
             this.gcService.Location = new System.Drawing.Point(2, 2);
             this.gcService.MainView = this.gvService;
             this.gcService.Name = "gcService";
-            this.gcService.Size = new System.Drawing.Size(346, 297);
+            this.gcService.Size = new System.Drawing.Size(210, 297);
             this.gcService.TabIndex = 4;
             this.gcService.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvService});
@@ -243,6 +396,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 117;
             // 
             // gridColumn2
             // 
@@ -260,7 +414,11 @@
             this.layoutControlItem11,
             this.layoutControlItem12,
             this.layoutControlItem13,
-            this.emptySpaceItem2});
+            this.layoutControlItem18,
+            this.layoutControlItem19,
+            this.layoutControlItem20,
+            this.layoutControlItem21,
+            this.emptySpaceItem1});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
@@ -272,35 +430,71 @@
             this.layoutControlItem11.Control = this.gcService;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(350, 301);
+            this.layoutControlItem11.Size = new System.Drawing.Size(214, 301);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.gcMedicine;
-            this.layoutControlItem12.Location = new System.Drawing.Point(350, 0);
+            this.layoutControlItem12.Location = new System.Drawing.Point(214, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(388, 301);
+            this.layoutControlItem12.Size = new System.Drawing.Size(524, 301);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.btnThanhToan;
-            this.layoutControlItem13.Location = new System.Drawing.Point(666, 301);
+            this.layoutControlItem13.Location = new System.Drawing.Point(660, 301);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(72, 26);
+            this.layoutControlItem13.Size = new System.Drawing.Size(78, 26);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
-            // emptySpaceItem2
+            // layoutControlItem18
             // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 301);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(666, 26);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem18.Control = this.chkTienMat;
+            this.layoutControlItem18.Location = new System.Drawing.Point(284, 301);
+            this.layoutControlItem18.Name = "layoutControlItem18";
+            this.layoutControlItem18.Size = new System.Drawing.Size(176, 26);
+            this.layoutControlItem18.Text = "Hình thức thanh toán:";
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(106, 13);
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.chkQrBIDV;
+            this.layoutControlItem19.Location = new System.Drawing.Point(460, 301);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(67, 26);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem19.TextVisible = false;
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.chkMomo;
+            this.layoutControlItem20.Location = new System.Drawing.Point(527, 301);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(65, 26);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem20.TextVisible = false;
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.chkVnPay;
+            this.layoutControlItem21.Location = new System.Drawing.Point(592, 301);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(68, 26);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem21.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 301);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(284, 26);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // groupBox1
             // 
@@ -332,6 +526,30 @@
             this.layoutControl2.Size = new System.Drawing.Size(738, 240);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
+            // 
+            // txtNote2
+            // 
+            this.txtNote2.Location = new System.Drawing.Point(534, 146);
+            this.txtNote2.Name = "txtNote2";
+            this.txtNote2.Size = new System.Drawing.Size(202, 92);
+            this.txtNote2.StyleController = this.layoutControl2;
+            this.txtNote2.TabIndex = 10;
+            // 
+            // txtNote1
+            // 
+            this.txtNote1.Location = new System.Drawing.Point(260, 146);
+            this.txtNote1.Name = "txtNote1";
+            this.txtNote1.Size = new System.Drawing.Size(201, 92);
+            this.txtNote1.StyleController = this.layoutControl2;
+            this.txtNote1.TabIndex = 9;
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.Location = new System.Drawing.Point(260, 50);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(476, 20);
+            this.txtCMND.StyleController = this.layoutControl2;
+            this.txtCMND.TabIndex = 5;
             // 
             // chkNu
             // 
@@ -496,6 +714,33 @@
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.txtCMND;
+            this.layoutControlItem15.Location = new System.Drawing.Point(189, 48);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(549, 24);
+            this.layoutControlItem15.Text = "CMND:";
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(66, 13);
+            // 
+            // layoutControlItem16
+            // 
+            this.layoutControlItem16.Control = this.txtNote1;
+            this.layoutControlItem16.Location = new System.Drawing.Point(189, 144);
+            this.layoutControlItem16.Name = "layoutControlItem16";
+            this.layoutControlItem16.Size = new System.Drawing.Size(274, 96);
+            this.layoutControlItem16.Text = "Triệu chứng";
+            this.layoutControlItem16.TextSize = new System.Drawing.Size(66, 13);
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.txtNote2;
+            this.layoutControlItem17.Location = new System.Drawing.Point(463, 144);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(275, 96);
+            this.layoutControlItem17.Text = "Khám bệnh:";
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(66, 13);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -527,31 +772,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // gcSchedule
-            // 
-            this.gcSchedule.Location = new System.Drawing.Point(12, 12);
-            this.gcSchedule.MainView = this.gvSchedule;
-            this.gcSchedule.Name = "gcSchedule";
-            this.gcSchedule.Size = new System.Drawing.Size(544, 609);
-            this.gcSchedule.TabIndex = 6;
-            this.gcSchedule.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvSchedule});
-            // 
-            // gvSchedule
-            // 
-            this.gvSchedule.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn6,
-            this.gridColumn7,
-            this.gridColumn8,
-            this.gridColumn9,
-            this.gridColumn10});
-            this.gvSchedule.GridControl = this.gcSchedule;
-            this.gvSchedule.Name = "gvSchedule";
-            this.gvSchedule.OptionsView.ShowGroupPanel = false;
-            this.gvSchedule.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.gvSchedule_RowCellClick);
-            this.gvSchedule.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvSchedule_RowCellStyle);
-            this.gvSchedule.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gvSchedule_CustomUnboundColumnData);
-            // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.gcSchedule;
@@ -560,112 +780,6 @@
             this.layoutControlItem14.Size = new System.Drawing.Size(548, 613);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Bệnh nhân";
-            this.gridColumn6.FieldName = "PatientName";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.AllowEdit = false;
-            this.gridColumn6.OptionsColumn.ReadOnly = true;
-            this.gridColumn6.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 0;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Bác sĩ phụ trách";
-            this.gridColumn7.FieldName = "DoctorName";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.AllowEdit = false;
-            this.gridColumn7.OptionsColumn.ReadOnly = true;
-            this.gridColumn7.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 1;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Dịch vụ khám";
-            this.gridColumn8.FieldName = "ScheduleService";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.OptionsColumn.AllowEdit = false;
-            this.gridColumn8.OptionsColumn.ReadOnly = true;
-            this.gridColumn8.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 2;
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Lịch khám";
-            this.gridColumn9.FieldName = "DateSchedule";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.OptionsColumn.AllowEdit = false;
-            this.gridColumn9.OptionsColumn.ReadOnly = true;
-            this.gridColumn9.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 3;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Trạng thái";
-            this.gridColumn10.FieldName = "statusSTR";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.OptionsColumn.AllowEdit = false;
-            this.gridColumn10.OptionsColumn.ReadOnly = true;
-            this.gridColumn10.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 4;
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.Location = new System.Drawing.Point(260, 50);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(476, 20);
-            this.txtCMND.StyleController = this.layoutControl2;
-            this.txtCMND.TabIndex = 5;
-            // 
-            // layoutControlItem15
-            // 
-            this.layoutControlItem15.Control = this.txtCMND;
-            this.layoutControlItem15.Location = new System.Drawing.Point(189, 48);
-            this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(549, 24);
-            this.layoutControlItem15.Text = "CMND:";
-            this.layoutControlItem15.TextSize = new System.Drawing.Size(66, 13);
-            // 
-            // txtNote1
-            // 
-            this.txtNote1.Location = new System.Drawing.Point(260, 146);
-            this.txtNote1.Name = "txtNote1";
-            this.txtNote1.Size = new System.Drawing.Size(201, 92);
-            this.txtNote1.StyleController = this.layoutControl2;
-            this.txtNote1.TabIndex = 9;
-            // 
-            // layoutControlItem16
-            // 
-            this.layoutControlItem16.Control = this.txtNote1;
-            this.layoutControlItem16.Location = new System.Drawing.Point(189, 144);
-            this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(274, 96);
-            this.layoutControlItem16.Text = "Triệu chứng";
-            this.layoutControlItem16.TextSize = new System.Drawing.Size(66, 13);
-            // 
-            // txtNote2
-            // 
-            this.txtNote2.Location = new System.Drawing.Point(534, 146);
-            this.txtNote2.Name = "txtNote2";
-            this.txtNote2.Size = new System.Drawing.Size(202, 92);
-            this.txtNote2.StyleController = this.layoutControl2;
-            this.txtNote2.TabIndex = 10;
-            // 
-            // layoutControlItem17
-            // 
-            this.layoutControlItem17.Control = this.txtNote2;
-            this.layoutControlItem17.Location = new System.Drawing.Point(463, 144);
-            this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(275, 96);
-            this.layoutControlItem17.Text = "Khám bệnh:";
-            this.layoutControlItem17.TextSize = new System.Drawing.Size(66, 13);
             // 
             // FormThanhToan
             // 
@@ -680,9 +794,15 @@
             this.Load += new System.EventHandler(this.FormThanhToan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcSchedule)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSchedule)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chkVnPay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkMomo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkQrBIDV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkTienMat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMedicine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMedicine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcService)).EndInit();
@@ -691,10 +811,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkNu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkNam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
@@ -712,18 +839,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCMND.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNote1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNote2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -769,7 +891,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraGrid.GridControl gcSchedule;
         private DevExpress.XtraGrid.Views.Grid.GridView gvSchedule;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
@@ -784,6 +905,15 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraEditors.CheckEdit chkVnPay;
+        private DevExpress.XtraEditors.CheckEdit chkMomo;
+        private DevExpress.XtraEditors.CheckEdit chkQrBIDV;
+        private DevExpress.XtraEditors.CheckEdit chkTienMat;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
 
 
     }

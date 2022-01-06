@@ -393,5 +393,42 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
+        private void btnThanhToan_Click(object sender, System.EventArgs e)
+        {
+            
+            try
+            {
+                PictureBox image = new PictureBox();
+                if (chkQrBIDV.Checked == true)
+                {
+                    image.Image = Properties.Resources.bidv;
+                    PayOnline pay = new PayOnline("674", image);
+                    pay.ShowDialog();
+                }
+                if (chkVnPay.Checked == true)
+                {
+                    image.Image = Properties.Resources.vnpay;
+                    PayOnline pay = new PayOnline("674", image);
+                    pay.ShowDialog();
+                }
+                if (chkMomo.Checked == true)
+                {
+                    image.Image = Properties.Resources.momo;
+                    PayOnline pay = new PayOnline("674", image);
+                    pay.ShowDialog();
+                }
+                if (chkTienMat.Checked == true)
+                {
+
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+
+        }
     }
 }

@@ -480,3 +480,55 @@ INFO 2022-01-06 16:28:01,016 [10] - OnApplicationStart. Time=06:01:2022 16:28:01
 
 INFO 2022-01-06 16:37:49,347 [10] - OnApplicationStart. Time=06:01:2022 16:37:49
 
+INFO 2022-01-06 20:45:32,888 [10] - OnApplicationStart. Time=06:01:2022 20:45:32
+
+INFO 2022-01-06 21:26:35,663 [9] - OnApplicationStart. Time=06:01:2022 21:26:35
+
+INFO 2022-01-06 21:27:04,266 [10] - OnApplicationStart. Time=06:01:2022 21:27:04
+
+ERROR 2022-01-06 21:27:37,746 [10] - 
+System.IO.FileNotFoundException: F:/Đồ án/DoAnTotNgiep2FrontEnd/QuanLiPhongKham/images/momo.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at System.Drawing.Image.FromFile(String filename)
+   at QuanLiPhongKham.FormThanhToan.btnThanhToan_Click(Object sender, EventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 403
+
+ERROR 2022-01-06 21:27:41,629 [10] - 
+System.IO.FileNotFoundException: F:/Đồ án/DoAnTotNgiep2FrontEnd/QuanLiPhongKham/images/momo.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at System.Drawing.Image.FromFile(String filename)
+   at QuanLiPhongKham.FormThanhToan.btnThanhToan_Click(Object sender, EventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 403
+
+ERROR 2022-01-06 21:27:42,168 [10] - 
+System.IO.FileNotFoundException: F:/Đồ án/DoAnTotNgiep2FrontEnd/QuanLiPhongKham/images/momo.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at System.Drawing.Image.FromFile(String filename)
+   at QuanLiPhongKham.FormThanhToan.btnThanhToan_Click(Object sender, EventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 403
+
+ERROR 2022-01-06 21:27:42,347 [10] - 
+System.IO.FileNotFoundException: F:/Đồ án/DoAnTotNgiep2FrontEnd/QuanLiPhongKham/images/momo.jpg
+   at System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   at System.Drawing.Image.FromFile(String filename)
+   at QuanLiPhongKham.FormThanhToan.btnThanhToan_Click(Object sender, EventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 403
+
+INFO 2022-01-06 21:28:13,375 [9] - OnApplicationStart. Time=06:01:2022 21:28:13
+
+INFO 2022-01-06 21:30:28,979 [9] - OnApplicationStart. Time=06:01:2022 21:30:28
+
+INFO 2022-01-06 21:30:43,156 [10] - OnApplicationStart. Time=06:01:2022 21:30:43
+
+INFO 2022-01-06 21:46:43,338 [10] - OnApplicationStart. Time=06:01:2022 21:46:43
+
+INFO 2022-01-06 21:48:21,851 [9] - OnApplicationStart. Time=06:01:2022 21:48:21
+
+INFO 2022-01-06 21:49:13,954 [9] - OnApplicationStart. Time=06:01:2022 21:49:13
+
+INFO 2022-01-06 21:50:32,656 [9] - OnApplicationStart. Time=06:01:2022 21:50:32
+
+INFO 2022-01-06 21:53:42,876 [9] - OnApplicationStart. Time=06:01:2022 21:53:42
+
+INFO 2022-01-06 21:58:57,309 [10] - OnApplicationStart. Time=06:01:2022 21:58:57
+
+INFO 2022-01-06 22:01:45,241 [10] - OnApplicationStart. Time=06:01:2022 22:01:45
+
+INFO 2022-01-06 22:52:29,265 [10] - OnApplicationStart. Time=06:01:2022 22:52:29
+
