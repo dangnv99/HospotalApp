@@ -15,8 +15,8 @@ namespace QuanLiPhongKham
         [STAThread]
         static void Main()
         {
-           
-            
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             log4net.Config.DOMConfigurator.Configure();
@@ -25,3 +25,4 @@ namespace QuanLiPhongKham
         }
     }
 }
+// Đăn Nguyễn 

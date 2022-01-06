@@ -46,3 +46,55 @@ ERROR 2022-01-06 00:27:39,975 [1] -
 System.NullReferenceException: Object reference not set to an instance of an object.
    at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 293
 
+INFO 2022-01-06 00:48:52,843 [1] - OnApplicationStart. Time=06:01:2022 00:48:52
+
+ERROR 2022-01-06 00:49:01,341 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 293
+
+ERROR 2022-01-06 00:49:07,276 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 334
+
+INFO 2022-01-06 00:50:28,850 [1] - OnApplicationStart. Time=06:01:2022 00:50:28
+
+ERROR 2022-01-06 00:50:37,685 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 294
+
+ERROR 2022-01-06 00:50:40,862 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 294
+
+ERROR 2022-01-06 00:50:49,711 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 334
+
+ERROR 2022-01-06 00:50:54,430 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
+
+ERROR 2022-01-06 00:50:57,080 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
+
+ERROR 2022-01-06 00:51:00,868 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
+
+ERROR 2022-01-06 00:51:02,732 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
+
+ERROR 2022-01-06 00:51:03,324 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
+
+ERROR 2022-01-06 00:51:03,757 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
+
+ERROR 2022-01-06 00:51:04,142 [1] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 344
+

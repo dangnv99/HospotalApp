@@ -92,7 +92,6 @@ namespace QuanLiPhongKham
 
         public void Cancle(CancleShuedule data_)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -116,11 +115,10 @@ namespace QuanLiPhongKham
             }
             catch (Exception ex)
             {
-                Inventec.Common.Logging.LogSystem.Error(ex);                
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
-            
-            
         }
+
         public void GetdataPatient()
         {
             try
@@ -143,6 +141,7 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         public void GetdataDoctor()
         {
             try
@@ -166,9 +165,9 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         public void LoadSchedule()
         {
-
             try
             {
 
@@ -195,7 +194,6 @@ namespace QuanLiPhongKham
 
         public void LoadService()
         {
-
             try
             {
                 //HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create("http://localhost/data/api/Service/get-list-Service");
@@ -228,7 +226,6 @@ namespace QuanLiPhongKham
         {
             try
             {
-
                 responDoctorService getDS = new responDoctorService();
                 getDS.id = cboService.EditValue.ToString();
                 var json = JsonConvert.SerializeObject(getDS, Formatting.Indented);
@@ -255,25 +252,21 @@ namespace QuanLiPhongKham
         }
         #endregion
 
-
-
         private void FormLichKham_Load(object sender, EventArgs e)
         {
-
             try
             {
                 //thread1();
                 GetdataPatient();
                 LoadService();
                 GetdataDoctor();
-                thread();
+                LoadSchedule();
+                // thread();
             }
             catch (Exception ex)
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
-
         }
 
         private void gvSchedule_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
@@ -496,7 +489,6 @@ namespace QuanLiPhongKham
 
         private void btnSua_Click(object sender, System.EventArgs e)
         {
-           
             try
             {
                 var row = (CreatSchedule)gvSchedule.GetFocusedRow();
@@ -518,11 +510,9 @@ namespace QuanLiPhongKham
             }
             catch (Exception ex)
             {
-                Inventec.Common.Logging.LogSystem.Error(ex);                
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
-          
+
         }
-
-
     }
 }

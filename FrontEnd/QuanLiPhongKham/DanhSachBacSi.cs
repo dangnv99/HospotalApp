@@ -32,9 +32,9 @@ namespace QuanLiPhongKham
         responUserRole getrole;
        
         #region Ham gọi api
+
         public void call(UserCreat data_, string ServiceId)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -77,7 +77,6 @@ namespace QuanLiPhongKham
                     {
                         DevExpress.XtraEditors.XtraMessageBox.Show("Thêm dịch vụ thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                     }
-
                 }
             }
 
@@ -85,13 +84,10 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
-
         }
 
         public void callupate(UserCreat data_, string ServiceId)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -105,7 +101,6 @@ namespace QuanLiPhongKham
                 var result = response.Content.ReadAsStringAsync().Result;
                 if (result != null)
                 {
-
                     resultReq rs = new resultReq();
                     rs = JsonConvert.DeserializeObject<resultReq>(result);
                     if (rs.msg.Contains("thành công"))
@@ -117,15 +112,12 @@ namespace QuanLiPhongKham
 
                         var data2 = wc.UploadValues(url2, "POST", wc.QueryString);
                         var responseString = UnicodeEncoding.UTF8.GetString(data2);
-
-
                         DevExpress.XtraEditors.XtraMessageBox.Show("Thêm dịch vụ thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                     }
                     else
                     {
                         DevExpress.XtraEditors.XtraMessageBox.Show("Thêm dịch vụ thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                     }
-
                 }
             }
             catch (Exception ex)
@@ -184,13 +176,11 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
         # endregion
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             try
             {
                 UserCreat data_ = new UserCreat();
@@ -208,8 +198,8 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
+
         private void DanhSachBacSi_Load(object sender, EventArgs e)
         {
             try
@@ -221,9 +211,8 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);                
             }
-            
-           
         }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             try
@@ -246,8 +235,8 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
+
         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
@@ -265,13 +254,12 @@ namespace QuanLiPhongKham
             }
             catch (Exception ex)
             {
-
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         private void gVDanhSachBacSi_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
-        {
-            
+        {         
             try
             {
                 var data = (getUserlist)gVDanhSachBacSi.GetFocusedRow();
@@ -290,8 +278,7 @@ namespace QuanLiPhongKham
             catch (Exception ex)
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);                
-            }
-            
+            }  
         }
     }
 }

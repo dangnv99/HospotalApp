@@ -88,6 +88,7 @@ namespace QuanLiPhongKham
             }
 
         }
+
         public Image Base64ToImage(string base64String)
         {
             // Convert base 64 string to byte[]
@@ -113,9 +114,9 @@ namespace QuanLiPhongKham
                 return base64String;
             }
         }
+
         public void Cancle(CancleShuedule data_)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -143,6 +144,7 @@ namespace QuanLiPhongKham
             }
 
         }
+
         public void GetdataPatient()
         {
             try
@@ -165,6 +167,7 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         public void GetdataDoctor()
         {
             try
@@ -191,7 +194,6 @@ namespace QuanLiPhongKham
 
         public void LoadSchedule()
         {
-
             try
             {
 
@@ -213,12 +215,10 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
 
         public void LoadService()
         {
-
             try
             {
                 //HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create("http://localhost/data/api/Service/get-list-Service");
@@ -234,8 +234,6 @@ namespace QuanLiPhongKham
                 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
                 service = new responServicve();
                 service = Inventec.WCF.JsonConvert.JsonConvert.Deserialize<responServicve>(responseString);
-
-
             }
             catch (Exception ex)
             {
@@ -246,7 +244,6 @@ namespace QuanLiPhongKham
 
         public void callupate(UserCreat data_)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -309,10 +306,8 @@ namespace QuanLiPhongKham
         //}
         #endregion
 
-
         private void FormKeDonThuoc_Load(object sender, EventArgs e)
         {
-
             try
             {
 
@@ -325,7 +320,6 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
 
         private void gvShedule_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)

@@ -99,7 +99,6 @@ namespace QuanLiPhongKham
 
         public void callupate(UserCreat data_)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -137,6 +136,7 @@ namespace QuanLiPhongKham
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
+
         public Image Base64ToImage(string base64String)
         {
             // Convert base 64 string to byte[]
@@ -166,7 +166,6 @@ namespace QuanLiPhongKham
 
         private void DanhSachBenhNhan_Load(object sender, EventArgs e)
         {
-            
             try
             {
                 Getdata();
@@ -205,7 +204,6 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -237,7 +235,6 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -264,7 +261,6 @@ namespace QuanLiPhongKham
 
         private void gvPatient_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-
             try
             {
                 try

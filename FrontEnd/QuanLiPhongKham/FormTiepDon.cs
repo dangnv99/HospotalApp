@@ -26,7 +26,7 @@ namespace QuanLiPhongKham
         responServicve service_;
         static byte[] ImageBytes;
         public string imagepath;
-        
+
         bool isCameraRunning = false;
         #region Hàm sử lí họi api
         public void call(UserCreat data_)
@@ -65,13 +65,12 @@ namespace QuanLiPhongKham
                         Schedule.patientId = rs.data;
                         Schedule.dateTimeStamp = Convert.ToDateTime(txtDateLichKham.EditValue.ToString()).ToString("dd-MM-yyyy");
                         CreatSchedule(Schedule);
-                       
+
                     }
                     else
                     {
                         DevExpress.XtraEditors.XtraMessageBox.Show("Thêm bệnh nhân thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                     }
-
                 }
             }
 
@@ -114,6 +113,7 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         public void LoadDoctor(GetDoctorService doctorservice)
         {
             try
@@ -175,8 +175,6 @@ namespace QuanLiPhongKham
             }
 
         }
-
-
         #endregion
 
         private void FormTiepDon_Load(object sender, EventArgs e)
@@ -190,6 +188,7 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         private void btnTiepDon_Click(object sender, EventArgs e)
         {
             try
@@ -207,7 +206,7 @@ namespace QuanLiPhongKham
                 {
                     creat.sex = "Nữ";
                 }
-                
+
                 creat.address = txtAddress.Text;
                 creat.identityCard = txtCMND.Text;
                 creat.yearOfBirth = txtNamSinh.Text;
@@ -217,7 +216,7 @@ namespace QuanLiPhongKham
                 {
                     creat.avatar = Convert.ToBase64String(ImageBytes);
                 }
-               
+
                 call(creat);
 
             }

@@ -25,9 +25,9 @@ namespace QuanLiPhongKham
             InitializeComponent();
         }
         #region - Hàm sử lý gọi api -
+
         public void LoadMdedicine()
         {
-
             try
             {
                 ASCIIEncoding encoder = new ASCIIEncoding();
@@ -54,7 +54,6 @@ namespace QuanLiPhongKham
 
         public void create(Medicine data_)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -79,9 +78,8 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
-
         }
+
         public void createupdate(Medicine data_)
         {
             try
@@ -110,11 +108,9 @@ namespace QuanLiPhongKham
             }
         }
 
-
         #endregion
         private void FormDanhSachThuoc_Load(object sender, EventArgs e)
         {
-
             try
             {
                 LoadMdedicine();
@@ -123,7 +119,6 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -149,7 +144,6 @@ namespace QuanLiPhongKham
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             try
             {
                 Guid id = new Guid();
@@ -166,13 +160,10 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
-
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
             try
             {
                 var data = (ResultMedicine)gvMedicine.GetFocusedRow();
@@ -192,12 +183,10 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
 
         private void gvMedicine_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-
             try
             {
                 var data = (ResultMedicine)gvMedicine.GetFocusedRow();
@@ -216,9 +205,6 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
-
-
     }
 }

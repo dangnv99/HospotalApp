@@ -88,6 +88,7 @@ namespace QuanLiPhongKham
             }
 
         }
+
         public Image Base64ToImage(string base64String)
         {
             // Convert base 64 string to byte[]
@@ -113,9 +114,9 @@ namespace QuanLiPhongKham
                 return base64String;
             }
         }
+
         public void Cancle(CancleShuedule data_)
         {
-
             var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
             File.WriteAllText("utf8.json", json, Encoding.UTF8);
             File.WriteAllText("default.json", json, Encoding.Default);
@@ -135,6 +136,7 @@ namespace QuanLiPhongKham
                 DevExpress.XtraEditors.XtraMessageBox.Show("Hủy lịch thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
             }
         }
+
         public void GetdataPatient()
         {
             try
@@ -157,6 +159,7 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         public void GetdataDoctor()
         {
             try
@@ -180,6 +183,7 @@ namespace QuanLiPhongKham
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
         }
+
         public void LoadSchedule()
         {
 
@@ -209,7 +213,6 @@ namespace QuanLiPhongKham
 
         public void LoadService()
         {
-
             try
             {
                 //HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create("http://localhost/data/api/Service/get-list-Service");
@@ -225,8 +228,6 @@ namespace QuanLiPhongKham
                 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
                 service = new responServicve();
                 service = Inventec.WCF.JsonConvert.JsonConvert.Deserialize<responServicve>(responseString);
-
-
             }
             catch (Exception ex)
             {
@@ -237,7 +238,6 @@ namespace QuanLiPhongKham
 
         public void callupate(UserCreat data_)
         {
-
             try
             {
                 var json = JsonConvert.SerializeObject(data_, Formatting.Indented);
@@ -300,10 +300,8 @@ namespace QuanLiPhongKham
         //}
         #endregion
 
-
         private void FormKhambenh_Load(object sender, EventArgs e)
-        {
-           
+        {       
             try
             {
                 GetdataPatient();
@@ -314,8 +312,7 @@ namespace QuanLiPhongKham
             catch (Exception ex)
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);                
-            }
-             
+            }           
         }
 
         private void gvLichKham_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
@@ -454,7 +451,6 @@ namespace QuanLiPhongKham
 
         private void btnSave_Click(object sender, System.EventArgs e)
         {
-
             try
             {
                 var row = (CreatSchedule)gvLichKham.GetFocusedRow();
@@ -502,7 +498,6 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
-
         }
     }
 }
