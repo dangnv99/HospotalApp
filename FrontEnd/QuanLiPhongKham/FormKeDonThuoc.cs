@@ -314,7 +314,8 @@ namespace QuanLiPhongKham
                 GetdataPatient();
                 LoadService();
                 GetdataDoctor();
-                thread();
+                LoadSchedule();
+               // thread();
             }
             catch (Exception ex)
             {

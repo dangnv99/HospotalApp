@@ -32,7 +32,7 @@ namespace QuanLiPhongKham
             {
                 ASCIIEncoding encoder = new ASCIIEncoding();
                 byte[] data = encoder.GetBytes("");
-                HttpWebRequest request = WebRequest.Create("http://localhost/data/api/Medicine/get-List-Medicine") as HttpWebRequest;
+                HttpWebRequest request = WebRequest.Create("http://localhost/data/api/Medicine/get-List-Medicine") as HttpWebRequest; //https://localhost:44343/api/Medicine/get-List-Medicine  // http://localhost/data/api/Medicine/get-List-Medicine
                 request.Method = "POST";
                 request.ContentType = "application/json";
                 request.ContentLength = data.Length;
@@ -60,7 +60,7 @@ namespace QuanLiPhongKham
                 File.WriteAllText("utf8.json", json, Encoding.UTF8);
                 File.WriteAllText("default.json", json, Encoding.Default);
                 var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
-                var url = "http://localhost/data/api/Medicine/create-Medicine";
+                var url = "http://localhost/data/api/Medicine/create-Medicine"; //https://localhost:44343/api/Medicine/create-Medicine  //http://localhost/data/api/Medicine/create-Medicine
                 var client = new HttpClient();
                 var response = client.PostAsync(url, data).Result;
                 var result = response.Content.ReadAsStringAsync().Result;
@@ -73,7 +73,7 @@ namespace QuanLiPhongKham
                 {
                     DevExpress.XtraEditors.XtraMessageBox.Show("Thêm thuốc thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
                 }
-            }
+            }       
             catch (Exception ex)
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
@@ -88,7 +88,7 @@ namespace QuanLiPhongKham
                 File.WriteAllText("utf8.json", json, Encoding.UTF8);
                 File.WriteAllText("default.json", json, Encoding.Default);
                 var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
-                var url = "http://localhost/data/api/Medicine/update-Medicine";
+                var url = "http://localhost/data/api/Medicine/update-Medicine";  //http://localhost/data/api/Medicine/update-Medicine
                 var client = new HttpClient();
                 var response = client.PostAsync(url, data).Result;
                 var result = response.Content.ReadAsStringAsync().Result;
@@ -133,6 +133,7 @@ namespace QuanLiPhongKham
                     wc.QueryString.Add("id", data.idMedicine);
                     var datawc = wc.UploadValues(url, "POST", wc.QueryString);
                     var responseString = UnicodeEncoding.UTF8.GetString(datawc);
+                    LoadMdedicine();
                 }
             }
             catch (Exception ex)
@@ -148,7 +149,7 @@ namespace QuanLiPhongKham
             {
                 Guid id = new Guid();
                 Medicine medi = new Medicine();
-                medi.idMedicine = id.ToString();
+               // medi.idMedicine = Guid.NewGuid().ToString();
                 medi.nameMedicine = txtNameMedicine.Text;
                 medi.priceMedicine = txtPriceMedicine.Text;
                 medi.quantily = txtQuantily.Text;

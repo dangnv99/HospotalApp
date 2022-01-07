@@ -116,6 +116,7 @@
             this.txtMatKhau.Size = new System.Drawing.Size(170, 20);
             this.txtMatKhau.StyleController = this.layoutControl1;
             this.txtMatKhau.TabIndex = 5;
+            this.txtMatKhau.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtMatKhau_PreviewKeyDown);
             // 
             // txtTaiKhoan
             // 
@@ -124,6 +125,7 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(170, 20);
             this.txtTaiKhoan.StyleController = this.layoutControl1;
             this.txtTaiKhoan.TabIndex = 4;
+            this.txtTaiKhoan.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txtTaiKhoan_PreviewKeyDown);
             // 
             // layoutControlGroup1
             // 
