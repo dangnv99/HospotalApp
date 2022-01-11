@@ -49,6 +49,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcService = new DevExpress.XtraGrid.GridControl();
             this.gvService = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -344,7 +345,8 @@
             this.gvMedicine.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn3,
             this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.gridColumn11});
             this.gvMedicine.GridControl = this.gcMedicine;
             this.gvMedicine.Name = "gvMedicine";
             this.gvMedicine.OptionsView.ShowGroupPanel = false;
@@ -352,6 +354,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Tên thuốc";
+            this.gridColumn3.FieldName = "nameMedicine";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
@@ -359,6 +362,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Số lượng";
+            this.gridColumn4.FieldName = "QuantilyMedicine";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
@@ -366,9 +370,18 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Đơn giá";
+            this.gridColumn5.FieldName = "priceMedicine";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 2;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Tổng tiền";
+            this.gridColumn11.FieldName = "totalPrice";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 3;
             // 
             // gcService
             // 
@@ -882,7 +895,6 @@
         private DevExpress.XtraGrid.GridControl gcMedicine;
         private DevExpress.XtraGrid.Views.Grid.GridView gvMedicine;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.GridControl gcService;
         private DevExpress.XtraGrid.Views.Grid.GridView gvService;
@@ -914,6 +926,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
 
 
     }

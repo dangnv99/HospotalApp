@@ -1,26 +1,14 @@
-﻿INFO 2022-01-07 09:52:56,101 [9] - OnApplicationStart. Time=07:01:2022 09:52:56
-
-INFO 2022-01-07 10:11:05,420 [9] - OnApplicationStart. Time=07:01:2022 10:11:05
-
-INFO 2022-01-07 10:49:13,122 [10] - OnApplicationStart. Time=07:01:2022 10:49:13
-
-INFO 2022-01-07 14:28:42,991 [9] - OnApplicationStart. Time=07:01:2022 14:28:42
-
-INFO 2022-01-07 15:40:11,131 [9] - OnApplicationStart. Time=07:01:2022 15:40:11
-
-INFO 2022-01-07 15:43:15,263 [9] - OnApplicationStart. Time=07:01:2022 15:43:15
-
-ERROR 2022-01-07 15:46:13,822 [9] - 
+﻿ERROR 2022-01-11 00:05:41,320 [10] - 
 System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
    --- End of inner exception stack trace ---
    at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at System.Threading.Tasks.Task`1.get_Result()
-   at QuanLiPhongKham.FormDanhSachThuoc.create(Medicine data_) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormDanhSachThuoc.cs:line 65
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
 ---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
 
 
-ERROR 2022-01-07 16:24:04,561 [9] - 
+ERROR 2022-01-11 00:08:48,973 [10] - 
 System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
    at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
@@ -37,7 +25,7 @@ System.AggregateException: One or more errors occurred. ---> System.Net.Http.Htt
    at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at System.Threading.Tasks.Task`1.get_Result()
-   at QuanLiPhongKham.FormDanhSachThuoc.create(Medicine data_) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormDanhSachThuoc.cs:line 65
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
 ---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
    at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
@@ -52,7 +40,251 @@ System.AggregateException: One or more errors occurred. ---> System.Net.Http.Htt
    --- End of inner exception stack trace ---<---
 
 
-ERROR 2022-01-07 16:36:17,029 [9] - 
+ERROR 2022-01-11 00:41:14,577 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-11 00:41:22,179 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-11 00:41:35,394 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:41:59,316 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 00:42:00,290 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:42:02,128 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-11 00:43:33,625 [9] - OnApplicationStart. Time=11:01:2022 00:43:33
+
+ERROR 2022-01-11 00:43:34,916 [9] - 
+System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type QuanLiPhongKham.Models.responUserRole. Encountered unexpected character '<'. ---> System.Xml.XmlException: Encountered unexpected character '<'.
+   at System.Xml.XmlExceptionHelper.ThrowXmlException(XmlDictionaryReader reader, XmlException exception)
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadAttributes()
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadNonExistentElementName(StringHandleConstStringType elementName)
+   at System.Runtime.Serialization.Json.XmlJsonReader.Read()
+   at System.Xml.XmlBaseReader.IsStartElement()
+   at System.Xml.XmlBaseReader.IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri)
+   at System.Runtime.Serialization.XmlReaderDelegator.IsStartElement(XmlDictionaryString localname, XmlDictionaryString ns)
+   at System.Runtime.Serialization.XmlObjectSerializer.IsRootElement(XmlReaderDelegator reader, DataContract contract, XmlDictionaryString name, XmlDictionaryString ns)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalIsStartObject(XmlReaderDelegator reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FrmDangNhap.Getdata() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FrmDangnhap.cs:line 48
+
+INFO 2022-01-11 00:43:48,593 [10] - OnApplicationStart. Time=11:01:2022 00:43:48
+
+ERROR 2022-01-11 00:43:49,826 [10] - 
+System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type QuanLiPhongKham.Models.responUserRole. Encountered unexpected character '<'. ---> System.Xml.XmlException: Encountered unexpected character '<'.
+   at System.Xml.XmlExceptionHelper.ThrowXmlException(XmlDictionaryReader reader, XmlException exception)
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadAttributes()
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadNonExistentElementName(StringHandleConstStringType elementName)
+   at System.Runtime.Serialization.Json.XmlJsonReader.Read()
+   at System.Xml.XmlBaseReader.IsStartElement()
+   at System.Xml.XmlBaseReader.IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri)
+   at System.Runtime.Serialization.XmlReaderDelegator.IsStartElement(XmlDictionaryString localname, XmlDictionaryString ns)
+   at System.Runtime.Serialization.XmlObjectSerializer.IsRootElement(XmlReaderDelegator reader, DataContract contract, XmlDictionaryString name, XmlDictionaryString ns)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalIsStartObject(XmlReaderDelegator reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FrmDangNhap.Getdata() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FrmDangnhap.cs:line 48
+
+INFO 2022-01-11 00:44:08,979 [11] - OnApplicationStart. Time=11:01:2022 00:44:08
+
+ERROR 2022-01-11 00:44:40,214 [11] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:44:40,294 [11] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:44:40,369 [11] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:44:40,570 [11] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:44:41,584 [11] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-11 00:50:00,461 [10] - OnApplicationStart. Time=11:01:2022 00:50:00
+
+ERROR 2022-01-11 00:50:11,609 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:50:11,687 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:50:11,761 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:50:11,990 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-11 00:51:21,530 [10] - OnApplicationStart. Time=11:01:2022 00:51:21
+
+ERROR 2022-01-11 00:51:34,621 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:51:34,715 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:51:34,794 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:51:35,037 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:51:36,699 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-11 00:53:17,214 [9] - OnApplicationStart. Time=11:01:2022 00:53:17
+
+ERROR 2022-01-11 00:53:30,121 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:53:30,212 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:53:30,297 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:53:30,519 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:54:02,448 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-11 00:55:22,162 [9] - OnApplicationStart. Time=11:01:2022 00:55:22
+
+ERROR 2022-01-11 00:55:34,088 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:55:34,171 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:55:34,253 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:55:34,476 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:55:47,630 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:55:56,023 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:55:56,118 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 00:55:58,162 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 288
+
+ERROR 2022-01-11 00:57:11,460 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 288
+
+ERROR 2022-01-11 00:57:29,681 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 288
+
+ERROR 2022-01-11 09:02:48,898 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 09:03:04,076 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-11 09:03:11,475 [9] - 
 System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
    at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
@@ -69,7 +301,7 @@ System.AggregateException: One or more errors occurred. ---> System.Net.Http.Htt
    at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at System.Threading.Tasks.Task`1.get_Result()
-   at QuanLiPhongKham.FormDanhSachThuoc.create(Medicine data_) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormDanhSachThuoc.cs:line 65
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
 ---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
    at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
@@ -84,9 +316,511 @@ System.AggregateException: One or more errors occurred. ---> System.Net.Http.Htt
    --- End of inner exception stack trace ---<---
 
 
-INFO 2022-01-07 23:21:05,497 [9] - OnApplicationStart. Time=07:01:2022 23:21:05
+INFO 2022-01-11 09:08:59,602 [9] - OnApplicationStart. Time=11:01:2022 09:08:59
 
-ERROR 2022-01-07 23:25:33,899 [9] - 
+ERROR 2022-01-11 09:10:23,343 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:23,435 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:23,523 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:23,600 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:23,675 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:23,757 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:23,838 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:23,915 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:23,996 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:24,080 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:24,158 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:24,243 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:24,324 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:24,404 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:24,485 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:24,619 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:24,683 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:24,752 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:26,420 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:26,505 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:26,583 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:26,701 [18] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcSchedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_Focused()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.get_IsFocusedView()
+   at DevExpress.XtraGrid.Views.Base.ViewInfo.ColumnViewInfo.CalcRowStateCore(Int32 rowHandle)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRowState(GridRowInfo ri)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.UpdateRowAppearance(GridRowInfo ri, Boolean always)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcGroupRowHeight()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRectsConstants()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRects(Rectangle bounds, Boolean partital)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.Calc(Graphics g, Rectangle bounds)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoInternalLayout()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.CalculateLayout()
+   at DevExpress.XtraGrid.Views.Grid.GridView.LayoutChanged()
+   at DevExpress.XtraGrid.Views.Base.BaseView.EndUpdateCore(Boolean synchronized)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.Data.DataControllerBase.RaiseListSourceChanged()
+   at DevExpress.Data.DataControllerBase.OnListSourceChanged()
+   at DevExpress.Data.DataControllerBase.SetListSourceCore(IList value)
+   at DevExpress.Data.DataControllerBase.SetListSource(IList value)
+   at DevExpress.Data.CurrencyDataController.OnCurrencyManagerChanged()
+   at DevExpress.Data.CurrencyDataController.set_CurrencyManager(CurrencyManager value)
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormLichKham.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 186
+
+ERROR 2022-01-11 09:10:26,917 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:26,995 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:27,076 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:27,158 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:27,240 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:27,329 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:27,410 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:27,492 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:27,575 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:27,659 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:27,742 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:27,825 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:29,457 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:29,533 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:29,609 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:29,680 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_RowCellClick(Object sender, RowCellClickEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 373
+
+ERROR 2022-01-11 09:10:30,330 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:30,410 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:30,494 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:30,572 [18] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcSchedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_Focused()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.get_IsFocusedView()
+   at DevExpress.XtraGrid.Views.Base.ViewInfo.ColumnViewInfo.CalcRowStateCore(Int32 rowHandle)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRowState(GridRowInfo ri)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.UpdateRowAppearance(GridRowInfo ri, Boolean always)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcGroupRowHeight()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRectsConstants()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRects(Rectangle bounds, Boolean partital)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.Calc(Graphics g, Rectangle bounds)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoInternalLayout()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.CalculateLayout()
+   at DevExpress.XtraGrid.Views.Grid.GridView.LayoutChanged()
+   at DevExpress.XtraGrid.Views.Base.BaseView.EndUpdateCore(Boolean synchronized)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.Data.DataControllerBase.RaiseListSourceChanged()
+   at DevExpress.Data.DataControllerBase.OnListSourceChanged()
+   at DevExpress.Data.DataControllerBase.SetListSourceCore(IList value)
+   at DevExpress.Data.DataControllerBase.SetListSource(IList value)
+   at DevExpress.Data.CurrencyDataController.OnCurrencyManagerChanged()
+   at DevExpress.Data.CurrencyDataController.set_CurrencyManager(CurrencyManager value)
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormLichKham.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 186
+
+ERROR 2022-01-11 09:10:30,670 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:30,754 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:30,840 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:30,921 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:31,007 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:31,088 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:31,171 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:31,253 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:31,341 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:32,628 [19] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcSchedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_Focused()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.get_IsFocusedView()
+   at DevExpress.XtraGrid.Views.Base.ViewInfo.ColumnViewInfo.CalcRowStateCore(Int32 rowHandle)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRowState(GridRowInfo ri)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.UpdateRowAppearance(GridRowInfo ri, Boolean always)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcGroupRowHeight()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRectsConstants()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRects(Rectangle bounds, Boolean partital)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.Calc(Graphics g, Rectangle bounds)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoInternalLayout()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.CalculateLayout()
+   at DevExpress.XtraGrid.Views.Grid.GridView.LayoutChanged()
+   at DevExpress.XtraGrid.Views.Base.BaseView.EndUpdateCore(Boolean synchronized)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.Data.DataControllerBase.RaiseListSourceChanged()
+   at DevExpress.Data.DataControllerBase.OnListSourceChanged()
+   at DevExpress.Data.DataControllerBase.SetListSourceCore(IList value)
+   at DevExpress.Data.DataControllerBase.SetListSource(IList value)
+   at DevExpress.Data.CurrencyDataController.OnCurrencyManagerChanged()
+   at DevExpress.Data.CurrencyDataController.set_CurrencyManager(CurrencyManager value)
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormLichKham.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 186
+
+ERROR 2022-01-11 09:10:32,731 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:32,816 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:32,901 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:32,980 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:33,058 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:33,142 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:34,427 [18] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcSchedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_Focused()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.get_IsFocusedView()
+   at DevExpress.XtraGrid.Views.Base.ViewInfo.ColumnViewInfo.CalcRowStateCore(Int32 rowHandle)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRowState(GridRowInfo ri)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.UpdateRowAppearance(GridRowInfo ri, Boolean always)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcGroupRowHeight()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRectsConstants()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRects(Rectangle bounds, Boolean partital)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.Calc(Graphics g, Rectangle bounds)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoInternalLayout()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.CalculateLayout()
+   at DevExpress.XtraGrid.Views.Grid.GridView.LayoutChanged()
+   at DevExpress.XtraGrid.Views.Base.BaseView.EndUpdateCore(Boolean synchronized)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.Data.DataControllerBase.RaiseListSourceChanged()
+   at DevExpress.Data.DataControllerBase.OnListSourceChanged()
+   at DevExpress.Data.DataControllerBase.SetListSourceCore(IList value)
+   at DevExpress.Data.DataControllerBase.SetListSource(IList value)
+   at DevExpress.Data.CurrencyDataController.OnCurrencyManagerChanged()
+   at DevExpress.Data.CurrencyDataController.set_CurrencyManager(CurrencyManager value)
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormLichKham.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 186
+
+ERROR 2022-01-11 09:10:34,526 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:34,603 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:34,683 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:35,953 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:36,031 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:36,117 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:36,184 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_RowCellClick(Object sender, RowCellClickEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 373
+
+ERROR 2022-01-11 09:10:36,742 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 282
+
+ERROR 2022-01-11 09:10:36,825 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 286
+
+ERROR 2022-01-11 09:10:36,903 [9] - 
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at QuanLiPhongKham.FormLichKham.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 290
+
+ERROR 2022-01-11 09:10:36,978 [20] - 
+System.InvalidOperationException: Cross-thread operation not valid: Control 'gcSchedule' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.get_Focused()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.get_IsFocusedView()
+   at DevExpress.XtraGrid.Views.Base.ViewInfo.ColumnViewInfo.CalcRowStateCore(Int32 rowHandle)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRowState(GridRowInfo ri)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.UpdateRowAppearance(GridRowInfo ri, Boolean always)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcGroupRowHeight()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRectsConstants()
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.CalcRects(Rectangle bounds, Boolean partital)
+   at DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo.Calc(Graphics g, Rectangle bounds)
+   at DevExpress.XtraGrid.Views.Base.ColumnView.DoInternalLayout()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.CalculateLayout()
+   at DevExpress.XtraGrid.Views.Grid.GridView.LayoutChanged()
+   at DevExpress.XtraGrid.Views.Base.BaseView.LayoutChangedSynchronized()
+   at DevExpress.XtraGrid.Views.Base.ColumnView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.XtraGrid.Views.Grid.GridView.OnDataController_DataSourceChanged(Object sender, EventArgs e)
+   at DevExpress.Data.DataControllerBase.RaiseListSourceChanged()
+   at DevExpress.Data.DataControllerBase.OnListSourceChanged()
+   at DevExpress.Data.DataControllerBase.SetListSourceCore(IList value)
+   at DevExpress.Data.DataControllerBase.SetListSource(IList value)
+   at DevExpress.Data.CurrencyDataController.OnCurrencyManagerChanged()
+   at DevExpress.Data.CurrencyDataController.set_CurrencyManager(CurrencyManager value)
+   at DevExpress.Data.CurrencyDataController.OnDataSourceChanged()
+   at DevExpress.Data.CurrencyDataController.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Base.BaseView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.Views.Grid.GridView.SetDataSource(BindingContext context, Object dataSource, String dataMember)
+   at DevExpress.XtraGrid.GridControl.ActivateDataSource()
+   at DevExpress.XtraGrid.GridControl.set_DataSource(Object value)
+   at QuanLiPhongKham.FormLichKham.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormLichKham.cs:line 186
+
+ERROR 2022-01-11 09:16:22,337 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:16:25,403 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:16:26,085 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:16:26,644 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:16:27,038 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:16:27,232 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:16:27,406 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+INFO 2022-01-11 09:27:29,031 [10] - OnApplicationStart. Time=11:01:2022 09:27:29
+
+INFO 2022-01-11 09:28:50,647 [10] - OnApplicationStart. Time=11:01:2022 09:28:50
+
+ERROR 2022-01-11 09:29:48,481 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:30:12,872 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:30:48,233 [10] - 
 System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
    at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
@@ -103,7 +837,7 @@ System.AggregateException: One or more errors occurred. ---> System.Net.Http.Htt
    at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
    at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
    at System.Threading.Tasks.Task`1.get_Result()
-   at QuanLiPhongKham.FormDanhSachThuoc.create(Medicine data_) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormDanhSachThuoc.cs:line 65
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
 ---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
    at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
    at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
@@ -118,9 +852,141 @@ System.AggregateException: One or more errors occurred. ---> System.Net.Http.Htt
    --- End of inner exception stack trace ---<---
 
 
-INFO 2022-01-07 23:31:50,661 [9] - OnApplicationStart. Time=07:01:2022 23:31:50
+ERROR 2022-01-11 09:31:39,892 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
 
-INFO 2022-01-07 23:32:52,225 [10] - OnApplicationStart. Time=07:01:2022 23:32:52
+ERROR 2022-01-11 09:32:26,868 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
 
-INFO 2022-01-07 23:52:28,088 [9] - OnApplicationStart. Time=07:01:2022 23:52:28
+ERROR 2022-01-11 09:33:20,092 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-11 09:34:45,782 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:35:07,501 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-11 09:36:13,871 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-11 09:37:07,320 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+INFO 2022-01-11 09:50:25,227 [9] - OnApplicationStart. Time=11:01:2022 09:50:25
+
+INFO 2022-01-11 09:50:47,694 [9] - OnApplicationStart. Time=11:01:2022 09:50:47
+
+ERROR 2022-01-11 09:51:53,776 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 288
+
+INFO 2022-01-11 09:52:52,171 [10] - OnApplicationStart. Time=11:01:2022 09:52:52
+
+INFO 2022-01-11 10:14:20,901 [9] - OnApplicationStart. Time=11:01:2022 10:14:20
+
+INFO 2022-01-11 10:15:00,936 [10] - OnApplicationStart. Time=11:01:2022 10:15:00
+
+INFO 2022-01-11 10:16:05,082 [9] - OnApplicationStart. Time=11:01:2022 10:16:05
+
+INFO 2022-01-11 10:16:32,726 [9] - OnApplicationStart. Time=11:01:2022 10:16:32
+
+INFO 2022-01-11 10:17:03,214 [9] - OnApplicationStart. Time=11:01:2022 10:17:03
+
+INFO 2022-01-11 11:34:28,182 [10] - OnApplicationStart. Time=11:01:2022 11:34:28
+
+ERROR 2022-01-11 11:38:54,099 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.btnKeDon_Click(Object sender, EventArgs e)
 

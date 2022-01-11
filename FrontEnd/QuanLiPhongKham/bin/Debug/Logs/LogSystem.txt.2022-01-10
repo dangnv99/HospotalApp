@@ -1,0 +1,1583 @@
+﻿INFO 2022-01-10 14:44:39,009 [10] - OnApplicationStart. Time=10:01:2022 14:44:39
+
+ERROR 2022-01-10 14:44:42,508 [10] - 
+System.Runtime.Serialization.SerializationException: Expecting element 'root' from namespace ''.. Encountered 'None'  with name '', namespace ''. 
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FrmDangNhap.Getdata() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FrmDangnhap.cs:line 48
+
+INFO 2022-01-10 14:45:11,302 [11] - OnApplicationStart. Time=10:01:2022 14:45:11
+
+ERROR 2022-01-10 14:45:12,664 [11] - 
+System.Runtime.Serialization.SerializationException: Expecting element 'root' from namespace ''.. Encountered 'None'  with name '', namespace ''. 
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FrmDangNhap.Getdata() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FrmDangnhap.cs:line 48
+
+INFO 2022-01-10 14:47:23,225 [9] - OnApplicationStart. Time=10:01:2022 14:47:23
+
+ERROR 2022-01-10 14:47:24,560 [9] - 
+System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type QuanLiPhongKham.Models.responUserRole. Encountered unexpected character '<'. ---> System.Xml.XmlException: Encountered unexpected character '<'.
+   at System.Xml.XmlExceptionHelper.ThrowXmlException(XmlDictionaryReader reader, XmlException exception)
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadAttributes()
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadNonExistentElementName(StringHandleConstStringType elementName)
+   at System.Runtime.Serialization.Json.XmlJsonReader.Read()
+   at System.Xml.XmlBaseReader.IsStartElement()
+   at System.Xml.XmlBaseReader.IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri)
+   at System.Runtime.Serialization.XmlReaderDelegator.IsStartElement(XmlDictionaryString localname, XmlDictionaryString ns)
+   at System.Runtime.Serialization.XmlObjectSerializer.IsRootElement(XmlReaderDelegator reader, DataContract contract, XmlDictionaryString name, XmlDictionaryString ns)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalIsStartObject(XmlReaderDelegator reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FrmDangNhap.Getdata() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FrmDangnhap.cs:line 48
+
+INFO 2022-01-10 14:47:47,276 [11] - OnApplicationStart. Time=10:01:2022 14:47:47
+
+INFO 2022-01-10 14:48:20,699 [9] - OnApplicationStart. Time=10:01:2022 14:48:20
+
+INFO 2022-01-10 14:50:10,074 [9] - OnApplicationStart. Time=10:01:2022 14:50:10
+
+ERROR 2022-01-10 14:52:31,088 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 322
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
+
+ERROR 2022-01-10 14:55:24,768 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 322
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
+
+INFO 2022-01-10 15:39:13,331 [9] - OnApplicationStart. Time=10:01:2022 15:39:13
+
+INFO 2022-01-10 15:43:42,809 [10] - OnApplicationStart. Time=10:01:2022 15:43:42
+
+ERROR 2022-01-10 15:44:44,711 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 322
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-10 15:44:51,966 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 322
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-10 15:46:59,897 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 322
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
+
+ERROR 2022-01-10 15:53:28,217 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 322
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-10 15:57:05,852 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 322
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
+
+INFO 2022-01-10 16:22:24,408 [10] - OnApplicationStart. Time=10:01:2022 16:22:24
+
+INFO 2022-01-10 16:27:58,586 [9] - OnApplicationStart. Time=10:01:2022 16:27:58
+
+ERROR 2022-01-10 16:29:50,385 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 255
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+INFO 2022-01-10 16:30:55,632 [10] - OnApplicationStart. Time=10:01:2022 16:30:55
+
+ERROR 2022-01-10 16:35:30,626 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:30,708 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:30,785 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:30,925 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:34,911 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:43,284 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:43,365 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:43,444 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:43,517 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 332
+
+ERROR 2022-01-10 16:35:47,087 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 16:35:47,168 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 16:35:47,247 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 16:35:47,412 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 16:35:48,880 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 16:36:10,939 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 16:36:20,547 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 16:36:20,625 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 16:36:20,705 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 16:36:20,828 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 16:36:22,571 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 16:36:44,760 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 255
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-10 16:36:53,210 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 255
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+INFO 2022-01-10 19:29:55,810 [9] - OnApplicationStart. Time=10:01:2022 19:29:55
+
+ERROR 2022-01-10 19:30:12,262 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 19:30:12,342 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 19:30:12,419 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 19:30:12,628 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 19:30:13,351 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 19:31:56,300 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 255
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
+
+INFO 2022-01-10 20:55:20,466 [10] - OnApplicationStart. Time=10:01:2022 20:55:20
+
+ERROR 2022-01-10 20:55:36,591 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:36,666 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:36,736 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:36,916 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:38,272 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:41,851 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:41,935 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:42,014 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:55:42,080 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:56:12,126 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:56:12,209 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:56:12,296 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+INFO 2022-01-10 20:56:45,805 [10] - OnApplicationStart. Time=10:01:2022 20:56:45
+
+ERROR 2022-01-10 20:57:10,533 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:10,618 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:10,695 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:10,894 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:12,456 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:27,532 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:27,609 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:27,688 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:27,763 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 20:57:41,037 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:04:21,559 [10] - 
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at QuanLiPhongKham.FormDanhSachThuoc.LoadMdedicine() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormDanhSachThuoc.cs:line 41
+
+ERROR 2022-01-10 21:04:25,918 [10] - 
+System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type QuanLiPhongKham.Models.responUserRole. Encountered unexpected character '<'. ---> System.Xml.XmlException: Encountered unexpected character '<'.
+   at System.Xml.XmlExceptionHelper.ThrowXmlException(XmlDictionaryReader reader, XmlException exception)
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadAttributes()
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadNonExistentElementName(StringHandleConstStringType elementName)
+   at System.Runtime.Serialization.Json.XmlJsonReader.Read()
+   at System.Xml.XmlBaseReader.IsStartElement()
+   at System.Xml.XmlBaseReader.IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri)
+   at System.Runtime.Serialization.XmlReaderDelegator.IsStartElement(XmlDictionaryString localname, XmlDictionaryString ns)
+   at System.Runtime.Serialization.XmlObjectSerializer.IsRootElement(XmlReaderDelegator reader, DataContract contract, XmlDictionaryString name, XmlDictionaryString ns)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalIsStartObject(XmlReaderDelegator reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FormThanhToan.GetdataPatient() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 160
+
+ERROR 2022-01-10 21:04:26,027 [10] - 
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at QuanLiPhongKham.FormThanhToan.LoadService() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 231
+
+ERROR 2022-01-10 21:04:26,148 [10] - 
+System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type QuanLiPhongKham.Models.responUserRole. Encountered unexpected character '<'. ---> System.Xml.XmlException: Encountered unexpected character '<'.
+   at System.Xml.XmlExceptionHelper.ThrowXmlException(XmlDictionaryReader reader, XmlException exception)
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadAttributes()
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadNonExistentElementName(StringHandleConstStringType elementName)
+   at System.Runtime.Serialization.Json.XmlJsonReader.Read()
+   at System.Xml.XmlBaseReader.IsStartElement()
+   at System.Xml.XmlBaseReader.IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri)
+   at System.Runtime.Serialization.XmlReaderDelegator.IsStartElement(XmlDictionaryString localname, XmlDictionaryString ns)
+   at System.Runtime.Serialization.XmlObjectSerializer.IsRootElement(XmlReaderDelegator reader, DataContract contract, XmlDictionaryString name, XmlDictionaryString ns)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalIsStartObject(XmlReaderDelegator reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FormThanhToan.GetdataDoctor() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 183
+
+ERROR 2022-01-10 21:04:26,257 [10] - 
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at QuanLiPhongKham.FormThanhToan.LoadSchedule() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 205
+
+INFO 2022-01-10 21:05:36,672 [9] - OnApplicationStart. Time=10:01:2022 21:05:36
+
+ERROR 2022-01-10 21:05:53,307 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:05:53,382 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:05:53,450 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:05:53,637 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:05:54,668 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:05:54,765 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:06:04,451 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:06:04,524 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:06:04,603 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:06:10,494 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:06:10,570 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:06:10,643 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:06:10,746 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:06:13,089 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:06:13,167 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:06:17,427 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 255
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-10 21:06:21,664 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.payment(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 255
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:44343
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   at System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+INFO 2022-01-10 21:07:26,059 [8] - OnApplicationStart. Time=10:01:2022 21:07:26
+
+ERROR 2022-01-10 21:07:44,715 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:44,807 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:44,884 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:45,084 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:46,731 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:46,933 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:47,036 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:51,744 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:51,819 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:51,894 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:07:57,405 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:07:57,481 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:07:57,555 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:07:57,665 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:08:01,560 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+ERROR 2022-01-10 21:08:01,644 [8] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 304
+
+INFO 2022-01-10 21:25:49,302 [9] - OnApplicationStart. Time=10:01:2022 21:25:49
+
+ERROR 2022-01-10 21:27:10,360 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:10,447 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:10,527 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:10,682 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:11,796 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:11,890 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:12,130 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:39,629 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:39,708 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:39,790 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:39,866 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKhambenh.gvLichKham_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKhambenh.cs:line 368
+
+ERROR 2022-01-10 21:27:43,678 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 21:27:43,760 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 21:27:43,840 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 21:27:43,961 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 21:27:46,428 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.gvShedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 409
+
+ERROR 2022-01-10 21:27:54,400 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:55,852 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:56,486 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:56,692 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:57,034 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:57,598 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:57,931 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:58,133 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+ERROR 2022-01-10 21:27:58,398 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormKeDonThuoc.CreatMedicine(CreatePrescriptionRequest creat) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormKeDonThuoc.cs:line 329
+
+INFO 2022-01-10 21:47:15,301 [10] - OnApplicationStart. Time=10:01:2022 21:47:15
+
+INFO 2022-01-10 21:48:04,963 [10] - OnApplicationStart. Time=10:01:2022 21:48:04
+
+ERROR 2022-01-10 21:48:16,701 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:16,790 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:16,869 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:17,091 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:19,366 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:20,018 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:20,641 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:21,315 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:21,904 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:22,276 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:22,595 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:22,931 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:23,497 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:23,564 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:33,426 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:48:34,363 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-10 21:57:07,796 [10] - OnApplicationStart. Time=10:01:2022 21:57:07
+
+ERROR 2022-01-10 21:57:19,258 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:19,347 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:19,431 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:19,655 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:32,439 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:35,671 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:41,055 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:45,562 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:57:46,554 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:47,856 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:49,308 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:49,454 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:57:50,258 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:50,907 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:51,560 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:52,109 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:52,273 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:57:52,556 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:53,522 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:53,660 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:57:54,673 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:55,154 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:55,322 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:57:55,672 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:56,537 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:57,319 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:58,169 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:57:58,332 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:57:58,736 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:58:00,057 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:58:00,169 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:58:01,436 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:58:01,527 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-10 21:59:05,317 [9] - OnApplicationStart. Time=10:01:2022 21:59:05
+
+ERROR 2022-01-10 21:59:17,221 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:17,303 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:17,383 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:17,645 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:19,001 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:21,038 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:21,216 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:22,823 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:23,724 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:23,861 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:24,250 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:25,222 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:25,338 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:25,764 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:26,037 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:26,815 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:28,434 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:28,977 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:29,149 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:29,487 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:30,229 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:30,390 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:30,722 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:31,300 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:31,461 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:32,082 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:32,892 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:33,248 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:33,741 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:33,889 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 21:59:34,590 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:35,251 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:36,038 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 21:59:47,608 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:05:15,196 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:05:20,021 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:05:20,772 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:05:27,211 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:05:29,776 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:07:46,651 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:07:47,641 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:07:48,792 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:08:04,246 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:08:06,879 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-10 22:09:32,560 [9] - OnApplicationStart. Time=10:01:2022 22:09:32
+
+ERROR 2022-01-10 22:09:47,603 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:09:47,689 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:09:47,765 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:09:47,974 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:09:49,271 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:10:38,012 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.Http.HttpClientHandler.GetResponseCallback(IAsyncResult ar)
+   --- End of inner exception stack trace ---<---
+
+
+ERROR 2022-01-10 22:10:46,151 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:10:46,671 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:12:29,727 [9] - 
+System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
+
+INFO 2022-01-10 22:13:25,356 [9] - OnApplicationStart. Time=10:01:2022 22:13:25
+
+ERROR 2022-01-10 22:13:26,639 [9] - 
+System.Runtime.Serialization.SerializationException: There was an error deserializing the object of type QuanLiPhongKham.Models.responUserRole. Encountered unexpected character '<'. ---> System.Xml.XmlException: Encountered unexpected character '<'.
+   at System.Xml.XmlExceptionHelper.ThrowXmlException(XmlDictionaryReader reader, XmlException exception)
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadAttributes()
+   at System.Runtime.Serialization.Json.XmlJsonReader.ReadNonExistentElementName(StringHandleConstStringType elementName)
+   at System.Runtime.Serialization.Json.XmlJsonReader.Read()
+   at System.Xml.XmlBaseReader.IsStartElement()
+   at System.Xml.XmlBaseReader.IsStartElement(XmlDictionaryString localName, XmlDictionaryString namespaceUri)
+   at System.Runtime.Serialization.XmlReaderDelegator.IsStartElement(XmlDictionaryString localname, XmlDictionaryString ns)
+   at System.Runtime.Serialization.XmlObjectSerializer.IsRootElement(XmlReaderDelegator reader, DataContract contract, XmlDictionaryString name, XmlDictionaryString ns)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalIsStartObject(XmlReaderDelegator reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.InternalReadObject(XmlReaderDelegator xmlReader, Boolean verifyObjectName)
+   at System.Runtime.Serialization.XmlObjectSerializer.InternalReadObject(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   --- End of inner exception stack trace ---
+   at System.Runtime.Serialization.XmlObjectSerializer.ReadObjectHandleExceptions(XmlReaderDelegator reader, Boolean verifyObjectName, DataContractResolver dataContractResolver)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(XmlDictionaryReader reader)
+   at System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(Stream stream)
+   at Inventec.WCF.JsonConvert.JsonConvert.Deserialize[T](String json)
+   at QuanLiPhongKham.FrmDangNhap.Getdata() in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FrmDangnhap.cs:line 48
+
+INFO 2022-01-10 22:13:50,511 [10] - OnApplicationStart. Time=10:01:2022 22:13:50
+
+ERROR 2022-01-10 22:14:05,877 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:14:05,961 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:14:06,038 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:14:06,245 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:14:45,598 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:14:51,802 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-10 22:15:27,889 [9] - OnApplicationStart. Time=10:01:2022 22:15:27
+
+ERROR 2022-01-10 22:15:39,093 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:39,182 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:39,263 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:39,507 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:40,878 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:52,577 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:52,773 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:15:54,292 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:55,614 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:55,759 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:15:56,334 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:56,956 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:57,136 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:15:58,003 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:58,988 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:15:59,686 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:00,851 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:01,049 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:16:01,407 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:01,968 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:02,145 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:16:02,423 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:02,802 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:02,914 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:16:03,225 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:03,894 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:04,855 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:04,929 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:05,017 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:16:05,937 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:06,630 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:06,739 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:16:07,313 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:16:07,695 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:20,310 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:20,487 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:20,902 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:21,512 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:21,645 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:22,279 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:22,682 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:23,184 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:23,383 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:23,671 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:24,102 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:25,735 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:26,375 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:26,551 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:27,133 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:27,701 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:28,080 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:29,639 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 22:17:29,782 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 133
+
+ERROR 2022-01-10 22:17:30,219 [9] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-10 23:54:14,763 [10] - OnApplicationStart. Time=10:01:2022 23:54:14
+
+ERROR 2022-01-10 23:55:07,892 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:55:07,970 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:55:08,044 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:55:08,246 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:55:09,231 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:55:13,300 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:55:14,696 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+INFO 2022-01-10 23:55:37,802 [10] - OnApplicationStart. Time=10:01:2022 23:55:37
+
+ERROR 2022-01-10 23:56:23,270 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:56:23,362 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:56:23,443 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:56:23,667 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:56:24,603 [10] - 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at QuanLiPhongKham.FormThanhToan.gvSchedule_CustomUnboundColumnData(Object sender, CustomColumnDataEventArgs e) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 331
+
+ERROR 2022-01-10 23:58:04,904 [10] - 
+System.AggregateException: One or more errors occurred. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at QuanLiPhongKham.FormThanhToan.ListMediCine(Payment pay) in f:\Đồ án\DoAnTotNgiep2\FrontEnd\QuanLiPhongKham\FormThanhToan.cs:line 126
+---> (Inner Exception #0) System.Threading.Tasks.TaskCanceledException: A task was canceled.<---
+
+

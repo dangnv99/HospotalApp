@@ -236,6 +236,42 @@ namespace QuanLiPhongKham
 
         }
 
+        public void CreateRevenue(CreatPayment pay)
+        {
+        
+            try
+            {
+                var json = JsonConvert.SerializeObject(pay, Formatting.Indented);
+                File.WriteAllText("utf8.json", json, Encoding.UTF8);
+                File.WriteAllText("default.json", json, Encoding.Default);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                var url = "http://localhost/data/api/Payment/shedule-payment";
+                var client = new HttpClient();
+                var response = client.PostAsync(url, data).Result;
+
+                var result = response.Content.ReadAsStringAsync().Result;
+                if (result != null)
+                {
+                    resultReq rs = new resultReq();
+                    rs = JsonConvert.DeserializeObject<resultReq>(result);
+                    //if (rs.msg.Contains("thành công"))
+                    //{
+                   // DevExpress.XtraEditors.XtraMessageBox.Show("Lưu thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    //}
+                    //else
+                    //{
+                    //    DevExpress.XtraEditors.XtraMessageBox.Show("Lưu thất bại thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    //}
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+            
+        }
+
+
         public void callupate(UserCreat data_)
         {
             try
@@ -388,7 +424,7 @@ namespace QuanLiPhongKham
                         }
                         if (row.status == "2")
                         {
-                            e.Appearance.ForeColor = Color.Yellow;
+                            e.Appearance.ForeColor = Color.DarkOrchid;
                         }
                         if (row.status == "3")
                         {
@@ -494,10 +530,17 @@ namespace QuanLiPhongKham
                     wc.QueryString.Add("Status", "1");
                     var data_ = wc.UploadValues(url, "POST", wc.QueryString);
                     var responseString = UnicodeEncoding.UTF8.GetString(data_);
+
+
+                    CreatPayment crpayment =new  CreatPayment();
+                    crpayment.ScheduleId = row.id;
+                    CreateRevenue(crpayment);
                     GetdataPatient();
                     LoadService();
                     GetdataDoctor();
                     LoadSchedule();
+
+
                 }
             }
             catch (Exception ex)

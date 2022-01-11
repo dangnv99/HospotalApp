@@ -18,6 +18,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraTreeList.Data;
 using System.Threading;
 using Inventec.Common.Controls.EditorLoader;
+using System.Timers;
 namespace QuanLiPhongKham
 {
     public partial class FormKeDonThuoc : Form
@@ -33,6 +34,8 @@ namespace QuanLiPhongKham
         responUserRole getroleDoctor;
         ResultFetListSchedule Schedule;
         responServicve service;
+        List<ResultMedicineKeDon> add = new List<ResultMedicineKeDon>();
+        resultReq_ medi;
 
         private void thread()
         {
@@ -275,6 +278,73 @@ namespace QuanLiPhongKham
             }
         }
 
+        public void LoadMdedicine()
+        {
+            try
+            {
+                ASCIIEncoding encoder = new ASCIIEncoding();
+                byte[] data = encoder.GetBytes("");
+                HttpWebRequest request = WebRequest.Create("http://localhost/data/api/Medicine/get-List-Medicine") as HttpWebRequest; //https://localhost:44343/api/Medicine/get-List-Medicine  // http://localhost/data/api/Medicine/get-List-Medicine
+                request.Method = "POST";
+                request.ContentType = "application/json";
+                request.ContentLength = data.Length;
+                request.Expect = "application/json";
+                request.GetRequestStream().Write(data, 0, data.Length);
+                HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                 medi = new resultReq_();
+                medi = Inventec.WCF.JsonConvert.JsonConvert.Deserialize<resultReq_>(responseString);
+                List<ColumnInfo> columnInfos = new List<ColumnInfo>();
+                columnInfos.Add(new ColumnInfo("unit", "", 50, 1));
+                columnInfos.Add(new ColumnInfo("nameMedicine", "", 100, 1));
+                ControlEditorADO controlEditorADO = new ControlEditorADO("nameMedicine", "idMedicine", columnInfos, false, 150);
+                ControlEditorLoader.Load(cboMedicine, medi.data, controlEditorADO);
+                //gcMedicine.BeginUpdate();
+                //gcMedicine.DataSource = medi.data;
+                //gcMedicine.EndUpdate();
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);
+            }
+        }
+
+        public void CreatMedicine(CreatePrescriptionRequest creat) 
+        {
+        
+            try
+            {
+                var json = JsonConvert.SerializeObject(creat, Formatting.Indented);
+                File.WriteAllText("utf8.json", json, Encoding.UTF8);
+                File.WriteAllText("default.json", json, Encoding.Default);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                var url = "http://localhost/data/api/MedicinePrescription/create-Medicine"; //http://localhost/data/api/MedicinePrescription/create-Medicine
+                var client = new HttpClient();
+                var response = client.PostAsync(url, data).Result;
+
+                var result = response.Content.ReadAsStringAsync().Result;
+                if (result != null)
+                {
+                    resultReq rs = new resultReq();
+                    rs = JsonConvert.DeserializeObject<resultReq>(result);
+                    if (rs.data != null)
+                    {
+
+                        DevExpress.XtraEditors.XtraMessageBox.Show("Kê đơn thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    }
+                    else
+                    {
+                        DevExpress.XtraEditors.XtraMessageBox.Show("Kê đơn thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+            
+        }
         //public void LoadDoctor(GetDoctorService doctorservice)
         //{
         //    try
@@ -315,7 +385,16 @@ namespace QuanLiPhongKham
                 LoadService();
                 GetdataDoctor();
                 LoadSchedule();
-               // thread();
+                LoadMdedicine();
+                System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+
+
+              //  System.Timers.Timer aTimer = new System.Timers.Timer();
+              ////  aTimer.Elapsed += new ElapsedEventHandler(LoadSchedule());
+              //  aTimer.Interval = 5000;
+              //  aTimer.Enabled = true;
+
+                //thread();
             }
             catch (Exception ex)
             {
@@ -396,7 +475,7 @@ namespace QuanLiPhongKham
                         }
                         if (row.status == "2")
                         {
-                            e.Appearance.ForeColor = Color.Yellow;
+                            e.Appearance.ForeColor = Color.DarkOrchid;
                         }
                         if (row.status == "3")
                         {
@@ -456,6 +535,87 @@ namespace QuanLiPhongKham
             {
                 Inventec.Common.Logging.LogSystem.Error(ex);
             }
+        }
+
+        private void cboMedicine_EditValueChanged(object sender, System.EventArgs e)
+        {
+
+            try
+            {
+                var use = medi.data.FirstOrDefault(o => o.idMedicine == cboMedicine.EditValue);
+                txtUse.Text = use.useMedicine;
+                txtPrice.Text = use.priceMedicine;
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+            
+        }
+
+        private void btnThem_Click(object sender, System.EventArgs e)
+        {
+
+            try
+            {
+                var use = medi.data.FirstOrDefault(o => o.idMedicine == cboMedicine.EditValue);
+                ResultMedicineKeDon themthuoc = new ResultMedicineKeDon();
+                themthuoc.idMedicine = use.idMedicine;
+                themthuoc.nameMedicine = use.nameMedicine;
+                themthuoc.quantilyMedicine = txtSL.Text;
+                themthuoc.priceMedicine = use.priceMedicine;
+                themthuoc.quantily = use.quantily;
+                themthuoc.unit = use.unit;
+                themthuoc.useMedicine = use.useMedicine;
+                add.Add(themthuoc);
+                grcKeDon.DataSource = add;
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+            
+        }
+
+        private void btnKeDon_Click(object sender, System.EventArgs e)
+        {
+            
+            try
+            {
+                var row = (CreatSchedule)gvShedule.GetFocusedRow();
+
+                string url = "http://localhost/data/api/MedicinePrescription/delete-presctiption-medicine";  //https://localhost:44343/api/Schedule/update-schedule //http://localhost/data/api/Schedule/update-schedule
+                WebClient wc = new WebClient();
+                wc.QueryString.Add("Id", row.id);
+                var data_ = wc.UploadValues(url, "POST", wc.QueryString);
+                var responseString = UnicodeEncoding.UTF8.GetString(data_);
+
+
+                responUserRole getrolePatient_ = new responUserRole();
+                getrolePatient_.data = getrolePatient.data.Where(o => o.id == row.patientId).ToList();
+                CreatePrescriptionRequest create = new CreatePrescriptionRequest();
+                create.IdSchedule = row.id;
+                create.Name = getrolePatient_.data.FirstOrDefault().name;
+                create.TimeStamp = DateTime.Now.ToString();
+            //    create.Code = Guid.NewGuid().ToString();
+                List<PrescriptionMedicineModels> Medicines = new List<PrescriptionMedicineModels>();
+                List<ResultMedicineKeDon> dataKedon = new List<ResultMedicineKeDon>();
+                dataKedon = (List<ResultMedicineKeDon>)grvKeDon.DataSource;
+                foreach (var item in dataKedon)
+                {
+                    PrescriptionMedicineModels add_ = new PrescriptionMedicineModels();
+                    add_.IdMedicine = item.idMedicine;
+                    add_.QuantilyMedicine =int.Parse(item.quantilyMedicine);
+                    Medicines.Add(add_);
+                }
+                create.Medicines = Medicines;
+                CreatMedicine(create);
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);                
+            }
+            
         }
     }
 }

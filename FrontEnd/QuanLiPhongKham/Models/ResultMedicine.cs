@@ -34,4 +34,25 @@ namespace QuanLiPhongKham.Models
        
         public string idMedicine { get; set; }
     }
+
+    public class ResultMedicineKeDon
+    {
+
+        public string nameMedicine { get; set; }
+
+        public string useMedicine { get; set; }
+
+        public string quantilyMedicine { get; set; }
+
+        public string unit { get; set; }
+
+
+        public string quantily { get; set; }
+
+
+        public string priceMedicine { get; set; }
+
+
+        public string idMedicine { get; set; }
+    }
 }

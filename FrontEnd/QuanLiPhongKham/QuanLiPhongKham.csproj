@@ -192,10 +192,14 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AllInfor.cs" />
     <Compile Include="Models\CancleShuedule.cs" />
+    <Compile Include="Models\CreatePrescriptionRequest.cs" />
+    <Compile Include="Models\CreatPayment.cs" />
     <Compile Include="Models\CreatSchedule.cs" />
     <Compile Include="Models\GetDoctorService.cs" />
     <Compile Include="Models\Medicine.cs" />
+    <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\ResultMedicine.cs" />
     <Compile Include="Models\shedule.cs" />
     <Compile Include="Models\UserCreat.cs" />

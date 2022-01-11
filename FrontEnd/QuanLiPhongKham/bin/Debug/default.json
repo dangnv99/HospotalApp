@@ -1,7 +1,4 @@
 {
-  "status": null,
-  "msg": null,
-  "code": "doctor",
-  "keyword": null,
-  "data": null
+  "idPatient": null,
+  "idSchedule": "fd3cc03e-e14e-42e5-b5f4-8688405ac1c8"
 }

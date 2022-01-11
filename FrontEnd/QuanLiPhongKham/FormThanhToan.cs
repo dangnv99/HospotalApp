@@ -113,6 +113,32 @@ namespace QuanLiPhongKham
 
         }
 
+        public void ListMediCine(Payment pay) 
+        {
+            try
+            {
+                var json = JsonConvert.SerializeObject(pay, Formatting.Indented);
+                File.WriteAllText("utf8.json", json, Encoding.UTF8);
+                File.WriteAllText("default.json", json, Encoding.Default);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                var url = "http://localhost/data/api/Payment/Information-patient-schedule";  //https://localhost:44343/api/Payment/Information-patient-schedule //http://localhost/data/api/Payment/Information-patient-schedule
+                var client = new HttpClient();
+                var response = client.PostAsync(url, data).Result;
+
+                var result = response.Content.ReadAsStringAsync().Result;
+                if (result != null)
+                {
+                    QuanLiPhongKham.Models.AllInfor.DataRs rs = new QuanLiPhongKham.Models.AllInfor.DataRs();
+                    rs = JsonConvert.DeserializeObject<QuanLiPhongKham.Models.AllInfor.DataRs>(result);
+                    gcMedicine.DataSource = rs.data.medicine;
+                }
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);
+            }
+        }
+
         public void Cancle(CancleShuedule data_)
         {
             try
@@ -232,7 +258,7 @@ namespace QuanLiPhongKham
                 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
                 service = new responServicve();
                 service = Inventec.WCF.JsonConvert.JsonConvert.Deserialize<responServicve>(responseString);
-              
+
 
             }
             catch (Exception ex)
@@ -242,7 +268,36 @@ namespace QuanLiPhongKham
 
         }
 
-     
+        public string payment(Payment pay)
+        {
+            string rs_ = "";
+            try
+            {
+                var json = JsonConvert.SerializeObject(pay, Formatting.Indented);
+                File.WriteAllText("utf8.json", json, Encoding.UTF8);
+                File.WriteAllText("default.json", json, Encoding.Default);
+                var data = new System.Net.Http.StringContent(json, Encoding.UTF8, "application/json");
+                var url = "http://localhost/data/api/Payment/Price-schedule-Medicine"; //https://localhost:44343/api/Payment/Price-schedule-Medicine //http://localhost/data/api/Payment/Price-schedule-Medicine
+                var client = new HttpClient();
+                var response = client.PostAsync(url, data).Result;
+
+                var result = response.Content.ReadAsStringAsync().Result;
+                
+                resultReq rs = new resultReq();
+                rs = JsonConvert.DeserializeObject<resultReq>(result);
+                //if (rs.msg.Contains("thành công"))
+                //{
+
+                //}
+                rs_ = rs.data.ToString();
+                return rs_;
+            }
+            catch (Exception ex)
+            {
+                Inventec.Common.Logging.LogSystem.Error(ex);
+            }
+            return rs_;
+        }
         #endregion
         private void FormThanhToan_Load(object sender, EventArgs e)
         {
@@ -255,9 +310,9 @@ namespace QuanLiPhongKham
             }
             catch (Exception ex)
             {
-                Inventec.Common.Logging.LogSystem.Error(ex);                
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
-            
+
         }
 
         private void gvSchedule_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
@@ -332,7 +387,7 @@ namespace QuanLiPhongKham
                         }
                         if (row.status == "2")
                         {
-                            e.Appearance.ForeColor = Color.Yellow;
+                            e.Appearance.ForeColor = Color.DarkOrchid;
                         }
                         if (row.status == "3")
                         {
@@ -384,6 +439,10 @@ namespace QuanLiPhongKham
                         chkNam.Checked = false;
                         chkNu.Checked = true;
                     }
+                    Payment pay = new Payment ();
+                    pay.idPatient = row.patientId;
+                    pay.idSchedule = row.id;
+                    ListMediCine(pay);
                     gcService.DataSource = service.data.Where(o => o.id == row.serviceId).ToList();
                 }
             }
@@ -396,37 +455,62 @@ namespace QuanLiPhongKham
 
         private void btnThanhToan_Click(object sender, System.EventArgs e)
         {
-            
+
             try
             {
+                var row = (CreatSchedule)gvSchedule.GetFocusedRow();
+                Payment pay_ = new Payment();
+                pay_.idSchedule = row.id;
+                //payment(pay_);
                 PictureBox image = new PictureBox();
                 if (chkQrBIDV.Checked == true)
                 {
                     image.Image = Properties.Resources.bidv;
-                    PayOnline pay = new PayOnline("674", image);
+                    PayOnline pay = new PayOnline(payment(pay_), image,row);
                     pay.ShowDialog();
                 }
                 if (chkVnPay.Checked == true)
                 {
                     image.Image = Properties.Resources.vnpay;
-                    PayOnline pay = new PayOnline("674", image);
+                    PayOnline pay = new PayOnline(payment(pay_), image, row);
                     pay.ShowDialog();
                 }
                 if (chkMomo.Checked == true)
                 {
                     image.Image = Properties.Resources.momo;
-                    PayOnline pay = new PayOnline("674", image);
+                    PayOnline pay = new PayOnline(payment(pay_), image, row);
                     pay.ShowDialog();
                 }
                 if (chkTienMat.Checked == true)
                 {
+                    string url = "http://localhost/data/api/Schedule/update-schedule";  //https://localhost:44343/api/Schedule/update-schedule //http://localhost/data/api/Schedule/update-schedule
+                    WebClient wc = new WebClient();
 
+                    wc.QueryString.Add("DoctorId", row.doctorId);
+                    wc.QueryString.Add("PatientId", row.patientId);
+                    wc.QueryString.Add("DateTimeStamp", Convert.ToDateTime(row.dateTimeStamp.ToString()).ToString("dd-MM-yyyy"));
+                    wc.QueryString.Add("ServiceId", row.serviceId);
+                    wc.QueryString.Add("Id", row.id);
+                    wc.QueryString.Add("Status", "2");
+                    var data_ = wc.UploadValues(url, "POST", wc.QueryString);
+                    var responseString = UnicodeEncoding.UTF8.GetString(data_);
+                    if (responseString.Contains("thành công"))
+                    {
+
+                        DevExpress.XtraEditors.XtraMessageBox.Show("Thanh toán thành công", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+
+                    }
+                    else
+                    {
+                        DevExpress.XtraEditors.XtraMessageBox.Show("Thanh toán thất bại", "Thông báo", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.None);
+                    }
+                    
                 }
-               
+
             }
             catch (Exception ex)
             {
-                Inventec.Common.Logging.LogSystem.Error(ex);                
+                Inventec.Common.Logging.LogSystem.Error(ex);
             }
 
         }

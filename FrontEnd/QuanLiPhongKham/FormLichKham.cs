@@ -344,7 +344,7 @@ namespace QuanLiPhongKham
                         }
                         if (row.status == "2")
                         {
-                            e.Appearance.ForeColor = Color.Yellow;
+                            e.Appearance.ForeColor = Color.DarkOrchid;
                         }
                         if (row.status == "3")
                         {
@@ -390,7 +390,7 @@ namespace QuanLiPhongKham
                     if (row.status == "2")
                     {
                         txtStatus.Text = "Đã thanh toán";
-                        txtStatus.ForeColor = Color.Yellow;
+                        txtStatus.ForeColor = Color.DarkOrchid;
                     }
                     if (row.status == "3")
                     {
